@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+#sonavword {
+    width: 98vw;
+    height:auto;
+    /*margin-top: auto;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+}
+
+#top {
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(#fdb72b, #ffe100); */
+    border-bottom: 2px solid gray;
+
+}
+
+body {
+    background: linear-gradient(#fdb72b, #ffe100);
+    background-attachment: fixed;
+}
+
+.contentBlock {
+    position: absolute;
+    padding-left : 7vw;
+    padding-right : 7vw;
+    padding-bottom: 1.5vw;
+}
+
+.contentBlock p {
+    font-family: Oswald;
+    font-size: 3vw;
+    width: 40vw;
+}
+
+.contentBlock h1  {
+    font-family: Oswald, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw;
+}

@@ -19,36 +19,223 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    
+
+    animation: Bounce 3s ease infinite;
+}
+  
+@keyframes Bounce {
+0%, 100% {
+    top: -7vw;
+}
+50% {
+    top: 0;
+}
 }
 
 #top {
     width: 100vw;
     height: 100vh;
     /* background: linear-gradient(#fdb72b, #ffe100); */
-    border-bottom: 2px solid gray;
+    /* border-bottom: 2px solid gray; */
 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(#fdb72b, #ffe100);
-    background-attachment: fixed;
+    background: linear-gradient(#ffffff, #ffe51f, #ee6262, #00b7ff, #0de9b2);
+    /* background-attachment: fixed; */
+    padding: 0;
+    margin: 0;
+    bottom: 0;
 }
 
 .contentBlock {
-    position: absolute;
-    padding-left : 7vw;
-    padding-right : 7vw;
+    /* position: absolute; */
+    /* padding-left : 7vw; */
+    /* padding-right : 7vw; */
     padding-bottom: 1.5vw;
+    overflow: hidden;
+    position: relative;
 }
 
 .contentBlock p {
     font-family: Oswald;
-    font-size: 3vw;
+    font-size:calc(20px + 3vw);
     width: 40vw;
+    float: left;
+    min-width: 600px;
+    color: #ffffff;
+
+}
+
+/* .contentBlock .imgholder {
+    width: calc(50px + 42vw);
+    height: calc(50px + 42vw);
+    display: block;
+    overflow: visible;
+    float: left;
+    min-width: 600px;
+    position: relative;
+} */
+
+.contentBlock .topicalImg {
+    /* padding-left: 0; */
+    clear: both;
+    float:none;
+    width: 39vw;
+    height: auto;
+    min-width: 600px;
+    position: relative;
+    animation: Flutter 2s ease infinite;
+}
+
+@keyframes Flutter {
+    0%, 100% {
+        top: -2vw;
+    }
+    50% {
+        top: 0;
+    }
+}
+
+.contentBlock .down {
+    width: calc(50px + 9vw);
+    height: auto;
+    float:left;
+    padding-left: 0;
+    /* opacity: 0.5; */
+    display: block;
+    transform-origin: center, center;
+}
+
+@keyframes Spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.down:hover {
+    /* opacity: 1; */
+    animation: Spin 1s ease 1;
+    -webkit-transform:translate3d(0,0,0);
+}
+
+.contentBlock * {
+    padding-left: 6vw;
+}
+
+.contentBlock ul {
+    font-family: Oswald;
+    font-size:calc(20px + 3vw);
+    width: 40vw;
+    float: left;
+    /* padding-left: 0; */
+    list-style-position: inside;
+    color: #ffffff;
+}
+
+.contentBlock li {
+    width: 40vw;
+    min-width: 600px;
+    padding-left: 0;
 }
 
 .contentBlock h1  {
     font-family: Oswald, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vw;
+    font-size:calc(50px + 7vw);
+    text-decoration: overline;
+    color: #ffffff;
+    text-emphasis: bold;
+    width: 75vw;
+    float:left;
 }
+
+.contentBlock a {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 0;
+}
+
+.contentBlock a:hover {
+    color: #ececec;
+}
+
+.contentBlock li a {
+    padding-left: 0;
+}
+
+.barrierImage {
+    width: 100vw;
+    height:auto;
+    /*margin-top: auto;*/
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding-bottom: calc(20px + 3vw);
+}
+
+#blue {
+    color: #2679f5;
+    padding-left: 0;
+}
+
+#contactForm {
+    background-color: #ffffff00;
+    /* width: 40vw; */
+    font-family: Oswald;
+    font-size:calc(14px + 2vw);
+    /* padding-left: 0; */
+    color: #ffffff;
+    float: left;
+    min-width: 600px;
+}
+
+#entry\.414303172 {
+    height: calc(4 * calc(17px + 2.4vw));
+}
+
+#contactSubmit {
+    width: 40vw;
+    font-family: Oswald;
+    font-size:calc(14px + 2vw);
+    padding-left: 0;
+    border-radius: 2vw;
+    min-width: 600px;
+}
+
+.contactFormItems {
+    background-color: #ffffff;
+    width: 38vw;
+    font-family: Oswald;
+    font-size:calc(14px + 2vw);
+    padding-left: 2vw;
+    border-radius: 2vw;
+    min-width: calc(600px - 2vw);
+}
+
+.contactFormItems:hover {
+    background-color: #ececec;
+}
+
+::placeholder {
+    color: #ececec;
+    opacity: 1;
+}
+
+#BottomImage {
+    width: 100vw;
+    /* height:auto; */
+    display:block;
+    bottom: 0;
+    margin: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+

@@ -3,20 +3,103 @@
 <html> 
     <head>
     <link rel="stylesheet" href="index.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script>var submitted=false;</script>
+    <link rel = "icon" href = "Sfav.png">
+    <title>Home</title>
     </head>
 
     <body>
         <!--<h1>hihihih</h1>-->
         <div id = "top">
-        <img src="WideSonav.svg" id = "sonavword">
+        <a href = "#hi"><img src="CloudSonav.svg" id = "sonavword"></a>
         </div>
+        <a name = "hi"></a>
         <div class = "contentBlock">
-            <h1>Hi</h1>
-            <p>Hello. I'm Sonav. Nice to meet you. How's life. Hope you don't mind if I just go ahead and add some more text here so that it looks like I did something when in reality I didn't.</p>
+            <h1>Hi</h1> 
+            <a href = "#aboutme" class = "nextas"><img src = "DownButton.svg" class = "down"></a>
+            <p>Hello. I'm Sonav. Nice to meet you. That's me off to the right, up in the clouds. If you want to get to know me better, keep scrolling down!</p>
+            <!-- <div class = "imgholder"><img src="CloudMe.svg" class = "topicalImg"></div> -->
+            <img src="CloudMe.svg" class = "topicalImg">
         </div>
-        
-        
+        <br>
+        <img src = "CloudBar.svg" class = "barrierImage">
+        <br>
+        <a name = "aboutme"></a>
+        <div class = "contentBlock">
+                <h1>About Me</h1>
+                <a href = "#whatido" class = "nextas"><img src = "DownButton.svg" class = "down"></a>
+                <p>I am XIV years old. I live in Silicon Valley, and attend MVHS. I don't like pancakes or waffles. My favorite color is <span id = "blue">blue</span>. I still Minecraft. I can speak 3 languages.</p>
+                <a href = "https://pixabay.com/illustrations/minecraft-grass-brick-block-grass-1816996/"><img src="mcgrass.png" class = "topicalImg"></a>
+        </div>
+        <br>
+        <img src = "FlyingPancakes.svg" class = "barrierImage">
+        <br>
+        <a name = "whatido"></a>
+        <div class = "contentBlock">
+            <h1>What I Do</h1>
+            <a href = "#profxp" class = "nextas"><img src = "DownButton.svg" class = "down"></a>
+            <img src="Coding.svg" class = "topicalImg">
+            <ul>
+                <li><a href = "coding.html">Coding / Hacking</a>
+                </li>
+                <li><a href = "debating.html">Debating</a>
+                </li>
+                <li><a href = "exercising.html">Swimming</a>
+                </li>
+                <li><a href = "drawings.html">Drawing</a>
+                </li>
+                <li><a href = "eating.html">Eating</a>
+                </li>
+                <li><a href = "sleeping.html">Sleeping</a>
+                </li>
+            </ul>
+            
+        </div>
+        <br>
+        <img src = "CloudBar.svg" class = "barrierImage">
+        <br>
+        <a name = "profxp"></a>
+        <div class = "contentBlock">
+            <h1>Professional XP</h1>
+            <a href = "#resume" class = "nextas"><img src = "DownButton.svg" class = "down"></a>
+            <p>Some day.</p>
+            <img src="Sfav.png" class = "topicalImg">
+        </div>
+        <br>
+        <img src = "CloudBar.svg" class = "barrierImage">
+        <br>
+        <a name = "resume"></a>
+        <div class = "contentBlock">
+                <h1>My Resume</h1>
+                <a href = "#contactme" class = "nextas"><img src = "DownButton.svg" class = "down"></a>
+                <p>Ok so funny thing. You see, I spent all my time on this website. And now I'm out of it, so RESUME COMING SOON.</p>
+                <img src="Sfav.png" class = "topicalImg">
+        </div>
+        <br>
+        <img src = "CloudBar.svg" class = "barrierImage">
+        <br>
+        <a name = "contactme"></a>
+        <div class = "contentBlock">
+                <h1>Contact Me</h1>
+                <p>Want to greet me? Meet me? Hire me? Interview me? Ask questions to me? Pay me? Stalk me? Annoy me? Yeet me? Contact me? Well, you can do so in the form!</p>
+                <!-- <img src="CloudMe.svg"> -->
+                <!-- Eventually add icons for various things. -->
+                <form name = "contact" id = "contactForm" enctype = "text/plain" action = "https://docs.google.com/forms/d/e/1FAIpQLSfB9XV-yuliPDF7E8OYQP5THJiwrnu4-qQjpYZ1qeKay50N_A/formResponse?" target = "hidden_iframe" onsubmit = "fadeout()">
+                    Name: <br>
+                    <input type = "text" name = "entry.1876045147" id = "entry.1876045147" class = "contactFormItems" placeholder = "Humpdy Dumpdy"> <br>
+                    Email Address:<br>
+                    <input type = "text" name = "entry.1622198841" id = "entry.1622198841" class = "contactFormItems" placeholder = "HumpdyDumpdy@eggsociety.com"> <br>
+                    Subject:<br>
+                    <input type = "text" name = "entry.150627131" id = "entry.150627131" class = "contactFormItems" placeholder = "New Crack"> <br>
+                    Message:<br>
+                    <textarea type = "text" name = "entry.414303172" id = "entry.414303172" class = "contactFormItems" placeholder = "Hey Sonav, I was wondering ..."></textarea> <br>
+                    <input type = "submit" value = "Submit" id = "contactSubmit" class = "contactFormItems">
+                    <iframe name = "hidden_iframe" id = "hidden_iframe" style = "display:none;" onload = "if(submitted) {}"></iframe>
+                </form>
+        </div>
+        <br>
+        <img src = "FlatCloudEnd.svg" id = "BottomImage">
+        <script src = "index.js"></script>
     </body>
 </html>
-
-

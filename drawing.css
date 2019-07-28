@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.topImg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.sketchFish {
+    width: 70vw;
+    height: 70vh;
+    object-fit: cover;
+    margin-left: 12.5vw;
+    border-color: white;
+    border-radius: 20px;
+    border-width: 4px;
+    border-style: solid;
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+h1 {
+    padding-top: 6vw;
+    font-family: Oswald;
+    color: white;
+    font-size: calc(50px + 5vw);
+    width: 75vw;
+    margin-left: 12.5vw;
+}
+
+p {
+    padding-top: 2vw;
+    font-family: Oswald;
+    color: white;
+    font-size: calc(2vw + 20px);
+    width: 75vw;
+    margin-left: 12.5vw;
+}
+
+.galImg {
+    /* padding-top: 4vw; */
+    height: calc(300px + 5vw);
+    width: auto;
+    float: left;
+    object-fit: cover;
+}
+
+#galDiv {
+    padding-top: 6vw;
+    width: 75vw;
+    margin-left: 12.5vw;
+    overflow: hidden;
+}

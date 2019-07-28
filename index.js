@@ -7,7 +7,7 @@ var node = document.createTextNode("Your message has been recorded.");
 
 confirm.appendChild(node);
 
-var parent = document.getElementById()
+var parent = document.getElementById();
 
 function fadeout() {
     conForm.style.display="none";

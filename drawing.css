@@ -62,3 +62,12 @@ p {
     margin-left: 12.5vw;
     overflow: hidden;
 }
+
+h3 {
+    padding-left: 12.5vw;
+    width: 75vw;
+    padding-top: 1vw;
+    font-size: calc(1vw + 20px);
+    font-family: Oswald;
+    color: white;
+}

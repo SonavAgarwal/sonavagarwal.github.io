@@ -14,30 +14,39 @@ body {
     background-color: black;
 }
 
-h1 {
+.chunk h1 {
     padding-top: 6vw;
     font-family: Oswald;
     font-size: calc(50px + 5vw);
     width: 75vw;
-    margin-left: 12.5vw;
+    margin-left: 0vw;
     clear: both;
 }
 
-p {
+.chunk p {
     padding-top: 2vw;
     font-family: Oswald;
     font-size: calc(2vw + 20px);
     width: 75vw;
+    margin-left: 0vw;
+}
+
+
+
+.chunk {
+    width: 75vw;
     margin-left: 12.5vw;
 }
 
-.chunk img {
+.chunk .bigTopicalImg {
     width: 75vw;
-    margin-left: 12.5vw;
+    margin-left: 0;
     height: auto;
 }
 
 #topara {
+    padding-top: 2vw;
+    margin-left: 12.5vw;
     font-size: calc(1vw + 10px);
     white-space: pre;
     font-family: Arial, Helvetica, sans-serif;
@@ -46,16 +55,34 @@ p {
     height: 95vh;
     overflow: hidden;
     /* color: rgb(29, 192, 29); */
+    /* min-width: 400px; */
 }
 
 #topCode {
     width: 40vw;
     height: auto;
     float: left;
+    /* min-width: 400px; */
 }
 
-#minis {
+.minis {
     width: 10vw;
     height: auto;
     float: left;
+    /* min-width: 100px; */
+}
+
+.chunk .projicon {
+    width: calc(300px + 10vw);
+    height: calc(300px + 10vw);
+    float: left;
+    /* margin-top: 4vw; */
+}
+
+.chunk .description {
+    font-size: calc(2vw + 20px);
+    width: calc(300px + 10vw);
+    margin-left: 0vw;
+    float: left;
+    height: calc(300px + 10vw);
 }

@@ -47,15 +47,15 @@ body {
 #topara {
     padding-top: 2vw;
     margin-left: 12.5vw;
-    font-size: calc(1vw + 10px);
+    font-size: calc(1vw + 30px);
     white-space: pre;
     font-family: Arial, Helvetica, sans-serif;
-    width: 40vw;
+    width: 30vw;
     float: left;
-    height: 95vh;
-    overflow: hidden;
+    /* height: 95vh; */
+    /* overflow: hidden; */
     /* color: rgb(29, 192, 29); */
-    /* min-width: 400px; */
+    min-width: 600px;
 }
 
 #topCode {
@@ -65,11 +65,17 @@ body {
     /* min-width: 400px; */
 }
 
+#topicons {
+    width: 40vw;
+    float: left;
+    padding-left: 10vw;
+}
+
 .minis {
     width: 10vw;
     height: auto;
     float: left;
-    /* min-width: 100px; */
+    min-width: 150px;
 }
 
 .chunk .projicon {

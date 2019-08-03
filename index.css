@@ -12,7 +12,7 @@
 
 
 #sonavword {
-    width: 98vw;
+    width: 98%;
     height:auto;
     /*margin-top: auto;*/
     position: absolute;
@@ -25,7 +25,7 @@
   
 @keyframes Bounce {
 0%, 100% {
-    top: -7vw;
+    top: -7%;
 }
 50% {
     top: 0;
@@ -33,7 +33,7 @@
 }
 
 #top {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     /* background: linear-gradient(#fdb72b, #ffe100); */
     /* border-bottom: 2px solid gray; */
@@ -54,9 +54,9 @@ body {
 
 .contentBlock {
     /* position: absolute; */
-    /* padding-left : 7vw; */
-    /* padding-right : 7vw; */
-    padding-bottom: 1.5vw;
+    /* padding-left : 7%; */
+    /* padding-right : 7%; */
+    padding-bottom: 1.5%;
     overflow: hidden;
     position: relative;
 }
@@ -64,7 +64,7 @@ body {
 .contentBlock p {
     font-family: Oswald;
     font-size:calc(20px + 3vw);
-    width: 40vw;
+    width: 40%;
     float: left;
     min-width: 600px;
     color: #ffffff;
@@ -72,8 +72,8 @@ body {
 }
 
 /* .contentBlock .imgholder {
-    width: calc(50px + 42vw);
-    height: calc(50px + 42vw);
+    width: calc(50px + 42%);
+    height: calc(50px + 42%);
     display: block;
     overflow: visible;
     float: left;
@@ -85,7 +85,7 @@ body {
     /* padding-left: 0; */
     clear: both;
     float:none;
-    width: 39vw;
+    width: 39%;
     height: auto;
     min-width: 600px;
     position: relative;
@@ -94,7 +94,7 @@ body {
 
 @keyframes Flutter {
     0%, 100% {
-        top: -2vw;
+        top: -2%;
     }
     50% {
         top: 0;
@@ -102,7 +102,7 @@ body {
 }
 
 .contentBlock .down {
-    width: calc(50px + 9vw);
+    width: calc(50px + 9%);
     height: auto;
     float:left;
     padding-left: 0;
@@ -127,13 +127,13 @@ body {
 }
 
 .contentBlock * {
-    padding-left: 6vw;
+    padding-left: 6%;
 }
 
 .contentBlock ul {
     font-family: Oswald;
     font-size:calc(20px + 3vw);
-    width: 40vw;
+    width: 40%;
     float: left;
     /* padding-left: 0; */
     list-style-position: inside;
@@ -141,7 +141,7 @@ body {
 }
 
 .contentBlock li {
-    width: 40vw;
+    width: 40%;
     min-width: 600px;
     padding-left: 0;
 }
@@ -152,7 +152,7 @@ body {
     text-decoration: overline;
     color: #ffffff;
     text-emphasis: bold;
-    width: 75vw;
+    width: 75%;
     float:left;
 }
 
@@ -171,14 +171,14 @@ body {
 }
 
 .barrierImage {
-    width: 100vw;
+    width: 100%;
     height:auto;
     /*margin-top: auto;*/
     /* position: absolute; */
     top: 0;
     bottom: 0;
     margin: auto;
-    padding-bottom: calc(20px + 3vw);
+    padding-bottom: calc(20px + 3%);
 }
 
 #blue {
@@ -188,7 +188,7 @@ body {
 
 #contactForm {
     background-color: #ffffff00;
-    /* width: 40vw; */
+    width: 48%;
     font-family: Oswald;
     font-size:calc(14px + 2vw);
     /* padding-left: 0; */
@@ -198,11 +198,11 @@ body {
 }
 
 #entry\.414303172 {
-    height: calc(4 * calc(17px + 2.4vw));
+    height: calc(4 * calc(17px + 2.4%));
 }
 
 #contactSubmit {
-    width: 40vw;
+    width: 80%;
     font-family: Oswald;
     font-size:calc(14px + 2vw);
     padding-left: 0;
@@ -212,12 +212,12 @@ body {
 
 .contactFormItems {
     background-color: #ffffff;
-    width: 38vw;
+    width: 80%;
     font-family: Oswald;
     font-size:calc(14px + 2vw);
-    padding-left: 2vw;
+    padding-left: 2%;
     border-radius: 2vw;
-    min-width: calc(600px - 2vw);
+    min-width: calc(600px - 2%);
 }
 
 .contactFormItems:hover {
@@ -230,7 +230,7 @@ body {
 }
 
 #BottomImage {
-    width: 100vw;
+    width: 100%;
     /* height:auto; */
     display:block;
     bottom: 0;

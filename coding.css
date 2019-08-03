@@ -47,7 +47,7 @@ body {
 #topara {
     padding-top: 2vw;
     margin-left: 12.5vw;
-    font-size: calc(1vw + 30px);
+    font-size: calc(1vw + 20px);
     white-space: pre;
     font-family: Arial, Helvetica, sans-serif;
     width: 30vw;
@@ -55,7 +55,8 @@ body {
     /* height: 95vh; */
     /* overflow: hidden; */
     /* color: rgb(29, 192, 29); */
-    min-width: 600px;
+    /* min-width: 500px; */
+    /* max-width: 30vw; */
 }
 
 #topCode {
@@ -75,7 +76,7 @@ body {
     width: 10vw;
     height: auto;
     float: left;
-    min-width: 150px;
+    min-width: 120px;
 }
 
 .chunk .projicon {

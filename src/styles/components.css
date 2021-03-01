@@ -1,0 +1,48 @@
+.yellowShadow {
+    box-shadow: 20px 20px 0px var(--mainYellow);
+}
+.blueShadow {
+    box-shadow: 20px 20px 0px var(--mainBlue);
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-family: "Open Sans";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 10vw;
+}
+h2 {
+    font-family: "Open Sans";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 5vw;
+}
+h3 {
+    font-family: "Open Sans";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 2vw;
+}
+
+.headerOption {
+    flex: 1;
+    text-align: center;
+    padding: 1vw;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 0px var(--mainYellow);
+    background-color: var(--lightGray);
+}
+
+.headerOption:hover {
+    z-index: 100;
+    transform: translate(-10px, -10px);
+    box-shadow: 010px 10px 0px var(--mainYellow);
+}

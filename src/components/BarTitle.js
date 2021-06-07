@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
 function BarTitle(props) {
     return (
-        <h2 style={{ minWidth: "100vw", paddingLeft: "5vw" }}>
-            {props.children}
-        </h2>
-    )
+        <div style={{ display: "inline-block" }}>
+            <h2 style={{ minWidth: "100vw" }}>{props.children}</h2>
+        </div>
+    );
 }
 
-export default BarTitle
+export default BarTitle;

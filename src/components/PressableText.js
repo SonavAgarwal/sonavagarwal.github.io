@@ -1,25 +1,25 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-const jumpHeight = 2
+const jumpHeight = 2;
 
 function PressableText(props) {
-    const [pressed, setPressed] = useState(false)
-    const [hovered, setHovered] = useState(false)
+    const [pressed, setPressed] = useState(false);
+    const [hovered, setHovered] = useState(false);
 
     function getTranslateDistance() {
-        if (!hovered) return 0
-        if (pressed) return Math.round(jumpHeight / 2)
-        return jumpHeight
+        if (!hovered) return 0;
+        if (pressed) return Math.round(jumpHeight / 2);
+        return jumpHeight;
     }
 
     function get3DShadow() {
-        let final = ""
-        let n = getTranslateDistance() + 1
+        let final = "";
+        let n = getTranslateDistance() + 1;
         for (let i = 0; i < n; i++) {
-            final += `${i}px ${i}px 0px var(--mainYellow)`
-            if (n != i + 1) final += ", "
+            final += `${i}px ${i}px 0px var(--mainYellow)`;
+            if (n != i + 1) final += ", ";
         }
-        return final
+        return final;
     }
 
     const component = (
@@ -45,26 +45,29 @@ function PressableText(props) {
                 props.style
             )}
             onMouseOver={() => {
-                setHovered(true)
+                setHovered(true);
             }}
             onMouseLeave={() => {
-                setHovered(false)
+                setHovered(false);
             }}
             onMouseDown={() => setPressed(true)}
             onMouseUp={() => setPressed(false)}
         >
             {props.children}
         </span>
-    )
+    );
 
     if (props.link !== undefined) {
+        if (props.link.charAt(0) === "#") {
+            return <a href={props.link}>{component}</a>;
+        }
         return (
             <a href={props.link} rel="noreferrer" target="_blank">
                 {component}
             </a>
-        )
+        );
     }
-    return component
+    return component;
 }
 
-export default PressableText
+export default PressableText;

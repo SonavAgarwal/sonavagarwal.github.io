@@ -1,11 +1,13 @@
-import React, { useRef, useState } from "react"
-import FishTank from "./FishTank"
-import HeaderBarOption from "./HeaderBarOption"
-import JumpChar from "./JumpChar"
+import React, { useRef, useState } from "react";
+import FishTank from "./FishTank";
+import HeaderBarOption from "./HeaderBarOption";
+import JumpChar from "./JumpChar";
 
-import Droplets from "../assets/Droplets.svg"
+import PressableText from "./PressableText.js";
 
-import { motion } from "framer-motion"
+import Droplets from "../assets/Droplets.svg";
+
+import { motion } from "framer-motion";
 const nameArray = [
     "S",
     "o",
@@ -20,10 +22,10 @@ const nameArray = [
     "w",
     "a",
     "l",
-]
+];
 
 function HeaderSection(props) {
-    const tankRef = useRef(null)
+    const tankRef = useRef(null);
 
     return (
         <div>
@@ -49,12 +51,58 @@ function HeaderSection(props) {
                             padding: "2vw",
                             color: "white",
                             userSelect: "none",
+                            marginBottom: "-1vw",
                         }}
                     >
                         Sonav
                         <br />
                         Agarwal
                     </h1>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            width: "30vw",
+                        }}
+                    ></div>
+
+                    <h3
+                        style={{
+                            color: "white",
+                            paddingLeft: "2vw",
+                            paddingBottom: "2vw",
+                        }}
+                    >
+                        <PressableText
+                            style={{
+                                textDecorationColor: "white",
+                                textDecoration: "none",
+                            }}
+                            link={"#About"}
+                        >
+                            About
+                        </PressableText>{" "}
+                        |{" "}
+                        <PressableText
+                            style={{
+                                textDecorationColor: "white",
+                                textDecoration: "none",
+                            }}
+                            link={"#Projects"}
+                        >
+                            Projects
+                        </PressableText>{" "}
+                        |{" "}
+                        <PressableText
+                            style={{
+                                textDecorationColor: "white",
+                                textDecoration: "none",
+                            }}
+                            link={"#Contact"}
+                        >
+                            Contact
+                        </PressableText>{" "}
+                    </h3>
                 </div>
             </div>
             <div
@@ -99,7 +147,7 @@ function HeaderSection(props) {
                 </svg> */}
             </div>
         </div>
-    )
+    );
 }
 
-export default HeaderSection
+export default HeaderSection;

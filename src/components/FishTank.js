@@ -37,7 +37,7 @@ function FishTank(props) {
                     height: "100%",
                     backgroundColor: "var(--mainBlue)",
                     zIndex: 5,
-                    filter: "blur(1px) brightness(1)",
+                    filter: "blur(0px) brightness(1)",
                     overflowX: "clip",
                     overflowY: "visible",
                 }}

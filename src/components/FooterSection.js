@@ -1,22 +1,23 @@
-import React, { useState } from "react"
-import { motion } from "framer-motion"
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-import WaveImage from "../assets/WaveTop.svg"
+import WaveImage from "../assets/WaveTop.svg";
 
 // import GithubIcon from "super-tiny-icons/images/svg/github.svg"
-import InstagramIcon from "super-tiny-icons/images/svg/instagram.svg"
-import FacebookIcon from "super-tiny-icons/images/svg/facebook.svg"
+import InstagramIcon from "super-tiny-icons/images/svg/instagram.svg";
+import FacebookIcon from "super-tiny-icons/images/svg/facebook.svg";
 // import MailIcon from "super-tiny-icons/images/svg/gmail.svg"
-import MailIcon from "../assets/EmailIcon.png"
-import GithubIcon from "../assets/GitHub-Mark-120px-plus.png"
-import Pressable from "./Pressable"
+import MailIcon from "../assets/EmailIcon.png";
+import GithubIcon from "../assets/GitHub-Mark-120px-plus.png";
+import Pressable from "./Pressable";
 // import logo from "super-tiny-icons/images/svg/github.svg"
 
-const images = require.context("../assets", true)
+const images = require.context("../assets", true);
 
 function FooterSection(props) {
     return (
         <div style={{ display: "inline-block" }}>
+            <a style={{ width: 0, height: 0 }} name={props.anchor}></a>
             <div style={{ position: "relative", height: "auto" }}>
                 <WaveSizer></WaveSizer>
                 <Wave></Wave>
@@ -48,7 +49,10 @@ function FooterSection(props) {
                         icon={FacebookIcon}
                         link={"https://www.facebook.com/sonav.agarwal/"}
                     /> */}
-                    <Icon icon={MailIcon} link={"mailto: sonavahn@gmail.com"} />
+                    <Icon
+                        icon={MailIcon}
+                        link={"mailto: me@sonavagarwal.com"}
+                    />
                 </div>
                 <div
                     style={{
@@ -74,7 +78,7 @@ function FooterSection(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 function Icon(props) {
@@ -113,21 +117,23 @@ function Icon(props) {
                 </div>
             </Pressable>
         </div>
-    )
+    );
 }
 
 function Wave(props) {
     const [undulateDuration, setUndulateDuration] = useState(
         Math.round(Math.random() * 4) + 3
-    )
-    const [offset, setOffset] = useState(Math.round(Math.random() * -40))
-    const [xOffset, setXOffset] = useState(Math.round(Math.random() * 100 - 50))
+    );
+    const [offset, setOffset] = useState(Math.round(Math.random() * -40));
+    const [xOffset, setXOffset] = useState(
+        Math.round(Math.random() * 100 - 50)
+    );
     const [opacity, setOpacity] = useState(
         props.opacity !== undefined ? props.opacity : Math.random() * 0.5 + 0.25
-    )
+    );
     const [rotationRange, setRotationRange] = useState(
         Math.round(Math.random() * 4)
-    )
+    );
 
     return (
         <motion.div
@@ -167,7 +173,7 @@ function Wave(props) {
                 alt="wave"
             />
         </motion.div>
-    )
+    );
 }
 
 function WaveSizer(props) {
@@ -176,7 +182,7 @@ function WaveSizer(props) {
             src={WaveImage}
             style={{ transform: "scale(1.3)", opacity: 0.01 }}
         />
-    )
+    );
 }
 
-export default FooterSection
+export default FooterSection;

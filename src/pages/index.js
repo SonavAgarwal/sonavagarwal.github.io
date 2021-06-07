@@ -1,24 +1,26 @@
-import React from "react"
-import HalfImage from "../components/HalfImage"
-import HalfText from "../components/HalfText"
-import HeaderSection from "../components/HeaderSection"
-import Section from "../components/Section"
+import React from "react";
+import HalfImage from "../components/HalfImage";
+import HalfText from "../components/HalfText";
+import HeaderSection from "../components/HeaderSection";
+import Section from "../components/Section";
 
-import Portrait from "../assets/Portrait.jpg"
-import DebatePortrait from "../assets/Debate Portrait.jpg"
-import ConnectionCircle from "../assets/Connection Circle.png"
-import CoinCatchers from "../assets/Coin Catchers.png"
-import LonCapaBeautify from "../assets/Lon Capa Beautify.png"
-import DailyLogSimplifier from "../assets/Daily Log Simplifier.png"
-import Hackathons from "../assets/Friendly Reminders.png"
-import OldGames from "../assets/RedsRadAdventure.png"
-import PressableText from "../components/PressableText"
-import SquareCard from "../components/SquareCard"
-import BarTitle from "../components/BarTitle"
-import FooterSection from "../components/FooterSection"
-import { Helmet } from "react-helmet"
+import Portrait from "../assets/Portrait.jpg";
+import DebatePortrait from "../assets/Debate Portrait.jpg";
+import ConnectionCircle from "../assets/Connection Circle.png";
+import CoinCatchers from "../assets/Coin Catchers.png";
+import ScheduleLink from "../assets/ScheduleLink.png";
+import LonCapaBeautify from "../assets/Lon Capa Beautify.png";
+import DailyLogSimplifier from "../assets/Daily Log Simplifier.png";
+import CakeGame from "../assets/Cake Game.png";
+import Hackathons from "../assets/Friendly Reminders.png";
+import OldGames from "../assets/RedsRadAdventure.png";
+import PressableText from "../components/PressableText";
+import SquareCard from "../components/SquareCard";
+import BarTitle from "../components/BarTitle";
+import FooterSection from "../components/FooterSection";
+import { Helmet } from "react-helmet";
 
-const images = require.context("../assets", true)
+const images = require.context("../assets", true);
 
 export default function Home() {
     return (
@@ -32,7 +34,7 @@ export default function Home() {
                 />
             </Helmet>
             <HeaderSection></HeaderSection>
-            <Section>
+            <Section anchor={"About"}>
                 <HalfImage imageSource={Portrait} flexSize={4}></HalfImage>
                 <HalfText title="About Me" flexSize={8}>
                     Hi! I'm Sonav Agarwal, a junior in high school in Silicon
@@ -51,7 +53,7 @@ export default function Home() {
                     games with my friends.
                 </HalfText>
             </Section>
-            <Section>
+            <Section anchor={"School"}>
                 <HalfText title="School" flexSize={4}>
                     I'm currently a junior at MVHS.
                     <br />
@@ -73,8 +75,8 @@ export default function Home() {
                     flexSize={4}
                 ></HalfImage>
             </Section>
-            <BarTitle>Work / Projects</BarTitle>
-            <Section flex={true} fixedHeight={false}>
+            <Section flex={true} fixedHeight={false} anchor={"Projects"}>
+                <BarTitle>Work / Projects</BarTitle>
                 <SquareCard
                     link={"/testing"}
                     imageSource={ConnectionCircle}
@@ -97,7 +99,6 @@ export default function Home() {
                         here.
                     </PressableText>
                 </SquareCard>
-
                 <SquareCard
                     imageSource={CoinCatchers}
                     title={"Coin Catchers 3D"}
@@ -112,6 +113,32 @@ export default function Home() {
                     <PressableText
                         link={
                             "https://github.com/SonavAgarwal/Coin-Catchers-Final-Project"
+                        }
+                    >
+                        here.
+                    </PressableText>
+                </SquareCard>
+                <SquareCard
+                    imageSource={ScheduleLink}
+                    title={"Schedule Link"}
+                    description={
+                        "A web app to help MVHS students organize zoom links and homework."
+                    }
+                >
+                    At the beginning of the school year, I recognized that a
+                    large challenge for many students, including myself, would
+                    be managing the zoom links for 7 different periods. To solve
+                    this, I created Schedule Link Organizer, where you can enter
+                    your schedule, Canvas links, and etc. I also added Google
+                    task integration, so you can record your homework for each
+                    class. <br />
+                    <br /> I shared the app with my school, and it has helped
+                    many people gain control over school. <br />
+                    <br /> Unfortunately, it's only open to school students at
+                    the moment, but you can view the source{" "}
+                    <PressableText
+                        link={
+                            "https://github.com/SonavAgarwal/ScheduleTaskLinkOrganizer"
                         }
                     >
                         here.
@@ -162,6 +189,30 @@ export default function Home() {
                     <PressableText
                         link={
                             "https://github.com/mvhs-apps/daily-logs-simplifier"
+                        }
+                    >
+                        here.
+                    </PressableText>
+                </SquareCard>
+                <SquareCard
+                    imageSource={CakeGame}
+                    title={"APCS Final Projects"}
+                    description={"Two games created for my AP CS class."}
+                >
+                    The first semester project was to create a top down view
+                    shooter. You can view the game Duck Choke{" "}
+                    <PressableText
+                        link={"https://github.com/SonavAgarwal/Duck-Choke-Game"}
+                    >
+                        here.
+                    </PressableText>
+                    <br />
+                    <br />
+                    The second semester project was to create a top down RPG.
+                    You can view the io-game inspired game Make a Cake{" "}
+                    <PressableText
+                        link={
+                            "https://github.com/SonavAgarwal/Make-a-Cake-Game"
                         }
                     >
                         here.
@@ -219,7 +270,7 @@ export default function Home() {
                     <br />
                 </SquareCard>
             </Section>
-            <FooterSection></FooterSection>
+            <FooterSection anchor={"Contact"}></FooterSection>
         </div>
-    )
+    );
 }

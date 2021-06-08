@@ -1,10 +1,13 @@
-import React, { useRef, useState } from "react"
-import Pressable from "./Pressable"
+import React, { useRef, useState } from "react";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
+import Pressable from "./Pressable";
 
 function SquareCard(props) {
-    const [opened, setOpened] = useState(false)
+    const [opened, setOpened] = useState(false);
 
-    const selfRef = useRef(null)
+    const selfRef = useRef(null);
+
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
 
     // const scrollAnchor = null
     // (
@@ -21,11 +24,11 @@ function SquareCard(props) {
     // )
 
     function toggleOpened() {
-        setOpened(!opened)
+        setOpened(!opened);
         // if ()
         setTimeout(() => {
-            selfRef.current.scrollIntoView()
-        }, 100)
+            selfRef.current.scrollIntoView();
+        }, 100);
     }
     if (opened) {
         return (
@@ -47,7 +50,7 @@ function SquareCard(props) {
                         left: 0,
                         top: "-5vw",
                         zIndex: -10,
-                        height: "100vw",
+                        // height: "100vw",
                     }}
                 ></div>
                 <Pressable
@@ -65,7 +68,7 @@ function SquareCard(props) {
                         style={{
                             fontWeight: "bold",
                             aspectRatio: "1 / 1",
-                            width: "5vw",
+                            width: isMobile ? "10vw" : "5vw",
                             // top: 0,
                             // left: 0,
                             // lineHeight: "auto",
@@ -84,7 +87,7 @@ function SquareCard(props) {
                                 // width: "100%",
                                 // height: "100%",
                                 textAlign: "center",
-                                fontSize: "3vw",
+                                fontSize: isMobile ? "6vw" : "3vw",
                                 // flex: 1,
                                 color: "black",
                                 userSelect: "none",
@@ -97,25 +100,25 @@ function SquareCard(props) {
                 <div
                     style={{
                         backgroundColor: "var(--lightGray)",
-                        width: opened ? "auto" : "100%",
-                        height: opened ? "100%" : "auto",
+                        width: "auto",
+                        height: "100%",
                     }}
                     // className="squareCard"
                 >
                     <div
                         style={{
-                            width: opened ? "auto" : "100%",
-                            height: opened ? "80vh" : "auto",
+                            width: "auto",
+                            height: isMobile ? "auto" : "80vh",
                             // aspectRatio: "1 / 1",
                             display: "flex",
-                            flexDirection: "row",
+                            flexDirection: isMobile ? "column" : "row",
                             overflow: "hidden",
                         }}
                     >
                         <div
                             style={{
-                                width: opened ? "auto" : "100%",
-                                height: opened ? "80vh" : "auto",
+                                width: "auto",
+                                height: "80vh",
                                 flex: 1,
                                 aspectRatio: "1 / 1",
                                 // aspectRatio: "4 / 3",
@@ -175,7 +178,7 @@ function SquareCard(props) {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 
     return (
@@ -183,8 +186,8 @@ function SquareCard(props) {
             style={{
                 flex: 4,
                 float: "left",
-                minWidth: "25vw",
-                maxWidth: "26vw",
+                minWidth: isMobile ? "90vw" : "25vw",
+                maxWidth: isMobile ? "90vw" : "26vw",
                 position: "relative",
                 cursor: "pointer",
             }}
@@ -244,27 +247,28 @@ function SquareCard(props) {
                                 backgroundPosition: "center",
                             }}
                         ></div>
-                        <h3
+                        <h4
                             style={{
                                 padding: "1vw",
                                 // paddingBottom: "1vw",
-                                fontSize: "1.5vw",
+                                // fontSize: "1.5vw",
                                 textAlign: "left",
                                 // fontWeight: 600,
                                 // textTransform: "none",
                             }}
                         >
                             {props.title}
-                        </h3>
+                        </h4>
                         <p
                             style={{
                                 padding: "1vw",
                                 paddingTop: "0",
-                                fontSize: "1.5vw",
+                                // fontSize: "1.5vw",
                                 textAlign: "left",
                                 // fontWeight: 600,
                                 // textTransform: "none",
                             }}
+                            className="smallParagraph"
                         >
                             {props.description}
                         </p>
@@ -272,7 +276,7 @@ function SquareCard(props) {
                 </div>
             </Pressable>
         </div>
-    )
+    );
 }
 
-export default SquareCard
+export default SquareCard;

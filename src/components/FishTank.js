@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react"
-import Fish from "./Fish"
+import React, { useEffect, useRef, useState } from "react";
+import Fish from "./Fish";
 
 function FishTank(props) {
-    const [fishes, setFishes] = useState([])
+    const [fishes, setFishes] = useState([]);
     const [fishCount, setFishCount] = useState(
         Math.round(Math.random() * 3) + 7 //7
         // 1
-    )
+    );
 
     // const [mouseX, setMouseX] = useState(0)
     // const [mouseY, setMouseY] = useState(0)
@@ -15,14 +15,14 @@ function FishTank(props) {
 
     useEffect(
         function () {
-            let fishTemp = []
+            let fishTemp = [];
             for (let i = 0; i < fishCount; i++) {
-                fishTemp.push(<Fish key={i} tankRef={props.tankRef}></Fish>)
+                fishTemp.push(<Fish key={i} tankRef={props.tankRef}></Fish>);
             }
-            setFishes(fishTemp)
+            setFishes(fishTemp);
         },
         [props.tankRef]
-    )
+    );
 
     // function getFishes(mouseX, mouseY) {
     //     return fishes
@@ -34,7 +34,7 @@ function FishTank(props) {
                 style={{
                     position: "absolute",
                     width: "100%",
-                    height: "100%",
+                    height: "100vh",
                     backgroundColor: "var(--mainBlue)",
                     zIndex: 5,
                     filter: "blur(0px) brightness(1)",
@@ -64,7 +64,7 @@ function FishTank(props) {
                 }}
             ></div> */}
         </div>
-    )
+    );
 }
 
-export default FishTank
+export default FishTank;

@@ -1,6 +1,8 @@
-import React from "react"
+import React from "react";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 
 function HalfText(props) {
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
     return (
         <div
             style={{
@@ -13,7 +15,7 @@ function HalfText(props) {
         >
             <div
                 style={{
-                    height: "80vh",
+                    height: isMobile ? "auto" : "80vh",
                     // overflow: "scroll",
                     display: "flex",
                     flexDirection: "column",
@@ -27,7 +29,7 @@ function HalfText(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default HalfText
+export default HalfText;

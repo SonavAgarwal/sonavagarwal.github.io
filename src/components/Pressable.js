@@ -1,36 +1,41 @@
-import { Link } from "gatsby"
-import React, { useEffect, useState } from "react"
+import { Link } from "gatsby";
+import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 
-const jumpHeight = 10
+const jumpHeight = 10;
 
 function Pressable(props) {
-    const [pressed, setPressed] = useState(false)
-    const [hovered, setHovered] = useState(false)
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
+
+    const [pressed, setPressed] = useState(false);
+    const [hovered, setHovered] = useState(false);
 
     function getTranslateDistance() {
-        if (props.disabled) return 0
-        if (!hovered) return 0
-        if (pressed) return Math.round(jumpHeight / 2)
-        return jumpHeight
+        if (isMobile) return 0;
+        if (props.disabled) return 0;
+        if (!hovered) return 0;
+        if (pressed) return Math.round(jumpHeight / 2);
+        return jumpHeight;
     }
 
     function get3DShadow() {
-        if (props.disabled) return ""
-        let final = ""
-        let n = getTranslateDistance() + 1
+        if (isMobile) return "";
+        if (props.disabled) return "";
+        let final = "";
+        let n = getTranslateDistance() + 1;
         for (let i = 0; i < n; i++) {
-            final += `${i}px ${i}px 0px var(--mainYellow)`
-            if (n != i + 1) final += ", "
+            final += `${i}px ${i}px 0px var(--mainYellow)`;
+            if (n != i + 1) final += ", ";
         }
-        return final
+        return final;
     }
 
     useEffect(
         function () {
-            if (props.startHovered === false) setHovered(false)
+            if (props.startHovered === false) setHovered(false);
         },
         [props.startHovered]
-    )
+    );
 
     const component = (
         <div
@@ -54,11 +59,11 @@ function Pressable(props) {
                 props.style
             )}
             onMouseOver={() => {
-                setHovered(true)
+                setHovered(true);
             }}
             onMouseLeave={() => {
-                setHovered(false)
-                setPressed(false)
+                setHovered(false);
+                setPressed(false);
             }}
             onMouseDown={() => setPressed(true)}
             onMouseUp={() => setPressed(false)}
@@ -66,7 +71,7 @@ function Pressable(props) {
         >
             {props.children}
         </div>
-    )
+    );
 
     if (props.link != undefined) {
         if (props.external === true)
@@ -74,10 +79,10 @@ function Pressable(props) {
                 <a target="_blank" rel="noreferrer" href={props.link}>
                     {component}
                 </a>
-            )
-        return <Link to={props.link}>{component}</Link>
+            );
+        return <Link to={props.link}>{component}</Link>;
     }
-    return component
+    return component;
 }
 
-export default Pressable
+export default Pressable;

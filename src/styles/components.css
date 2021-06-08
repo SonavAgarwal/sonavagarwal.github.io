@@ -31,6 +31,13 @@ h3 {
     /* font-style: italic; */
     font-size: 2vw;
 }
+h4 {
+    font-family: "Open Sans";
+    font-weight: 800;
+    text-transform: uppercase;
+    /* font-style: italic; */
+    font-size: 1.5vw;
+}
 
 p {
     font-family: "Open Sans";
@@ -39,6 +46,10 @@ p {
     /* text-transform: uppercase; */
     /* font-style: italic; */
     font-size: 2vw;
+    line-height: 2.5vw;
+}
+.smallParagraph {
+    font-size: 1.5vw;
     line-height: 2.5vw;
 }
 
@@ -118,4 +129,50 @@ p {
     transition-property: width, height;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    h1 {
+        font-family: "Open Sans";
+        font-weight: 800;
+        text-transform: uppercase;
+        /* font-style: italic; */
+        font-size: 15vw;
+    }
+    h2 {
+        font-family: "Open Sans";
+        font-weight: 800;
+        text-transform: uppercase;
+        /* font-style: italic; */
+        font-size: 10vw;
+    }
+    h3 {
+        font-family: "Open Sans";
+        font-weight: 800;
+        text-transform: uppercase;
+        /* font-style: italic; */
+        font-size: 5vw;
+    }
+    h4 {
+        font-family: "Open Sans";
+        font-weight: 800;
+        text-transform: uppercase;
+        /* font-style: italic; */
+        font-size: 6vw;
+        line-height: 8vw;
+    }
+
+    p {
+        font-family: "Open Sans";
+        text-align: justify;
+        /* font-weight: 800; */
+        /* text-transform: uppercase; */
+        /* font-style: italic; */
+        font-size: 5vw;
+        line-height: 7vw;
+    }
+    .smallParagraph {
+        font-size: 5vw;
+        line-height: 7vw;
+    }
 }

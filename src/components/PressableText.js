@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 
 const jumpHeight = 2;
 
 function PressableText(props) {
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
+
     const [pressed, setPressed] = useState(false);
     const [hovered, setHovered] = useState(false);
 
     function getTranslateDistance() {
+        if (isMobile) return 0;
         if (!hovered) return 0;
         if (pressed) return Math.round(jumpHeight / 2);
         return jumpHeight;
     }
 
     function get3DShadow() {
+        if (isMobile) return "";
         let final = "";
         let n = getTranslateDistance() + 1;
         for (let i = 0; i < n; i++) {

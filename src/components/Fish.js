@@ -1,55 +1,57 @@
-import React, { useEffect, useState } from "react"
-import FishImage from "../assets/Fish.png"
-import FishEyeImage from "../assets/FishEye.png"
-import FishBody from "../assets/FishBody.png"
-import FishTail from "../assets/FishTail.png"
-import { motion, useAnimation, useMotionValue } from "framer-motion"
-import useInterval from "@use-it/interval"
-import useMouse from "@react-hook/mouse-position"
+import React, { useEffect, useState } from "react";
+import FishImage from "../assets/Fish.png";
+import FishEyeImage from "../assets/FishEye.png";
+import FishBody from "../assets/FishBody.png";
+import FishTail from "../assets/FishTail.png";
+import { motion, useAnimation, useMotionValue } from "framer-motion";
+import useInterval from "@use-it/interval";
+import useMouse from "@react-hook/mouse-position";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 
 // const moveRate
 
 function Fish(props) {
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
     // console.log(props.tankRef)
-    const x = useMotionValue()
-    const y = useMotionValue()
+    const x = useMotionValue();
+    const y = useMotionValue();
 
     // console.log(x)
 
     // const [xState, setXState] = useState(x.get())
 
-    const mouse = useMouse(props.tankRef, { fps: 20 })
+    const mouse = useMouse(props.tankRef, { fps: 20 });
 
-    const [xPos, setXPos] = useState(window.innerWidth / 2)
-    const [yPos, setYPos] = useState(-100)
-    const [flipped, setFlipped] = useState(false)
-    const [eyeRotation, setEyeRotation] = useState(0)
+    const [xPos, setXPos] = useState(window.innerWidth / 2);
+    const [yPos, setYPos] = useState(-100);
+    const [flipped, setFlipped] = useState(false);
+    const [eyeRotation, setEyeRotation] = useState(0);
 
     const [moveRate, setMoveRate] = useState(
         Math.round(Math.random() * 10000 + 3000)
-    )
-    const [flapRate, setFlaprate] = useState(Math.random() * 2 + 1)
-    const [hueShift, setHueShift] = useState(Math.round(Math.random() * 360))
+    );
+    const [flapRate, setFlaprate] = useState(Math.random() * 2 + 1);
+    const [hueShift, setHueShift] = useState(Math.round(Math.random() * 360));
 
     useInterval(function () {
-        let newXPos = Math.round(Math.random() * window.innerWidth)
+        let newXPos = Math.round(Math.random() * window.innerWidth);
         // console.log(newXPos + " " + xPos)
         if (newXPos > xPos) {
-            setFlipped(true)
+            setFlipped(true);
         } else {
-            setFlipped(false)
+            setFlipped(false);
         }
-        setXPos(pos => newXPos)
-        setYPos(pos => Math.round(Math.random() * window.innerHeight))
-    }, moveRate)
+        setXPos(pos => newXPos);
+        setYPos(pos => Math.round(Math.random() * window.innerHeight));
+    }, moveRate);
 
     useInterval(function () {
-        let dy = y.get() - mouse.pageY
-        let dx = x.get() - mouse.pageX
-        if (flipped) dx *= -1
+        let dy = y.get() - mouse.pageY;
+        let dx = x.get() - mouse.pageX;
+        if (flipped) dx *= -1;
 
-        setEyeRotation(Math.round((Math.atan2(dy, dx) * 180) / Math.PI) - 90)
-    }, 50)
+        setEyeRotation(Math.round((Math.atan2(dy, dx) * 180) / Math.PI) - 90);
+    }, 50);
 
     return (
         <motion.div
@@ -67,6 +69,7 @@ function Fish(props) {
                 zIndex: 100,
                 x,
                 y,
+                scale: isMobile ? 0.6 : 1,
             }}
             transition={{
                 duration: 5,
@@ -160,7 +163,7 @@ function Fish(props) {
                 </motion.div>
             </motion.div>
         </motion.div>
-    )
+    );
 }
 
-export default Fish
+export default Fish;

@@ -10,13 +10,15 @@ import FacebookIcon from "super-tiny-icons/images/svg/facebook.svg";
 import MailIcon from "../assets/EmailIcon.png";
 import GithubIcon from "../assets/GitHub-Mark-120px-plus.png";
 import Pressable from "./Pressable";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 // import logo from "super-tiny-icons/images/svg/github.svg"
 
 const images = require.context("../assets", true);
 
 function FooterSection(props) {
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
     return (
-        <div style={{ display: "inline-block" }}>
+        <div style={{ display: "inline-block", overflowX: "hidden" }}>
             <a style={{ width: 0, height: 0 }} name={props.anchor}></a>
             <div style={{ position: "relative", height: "auto" }}>
                 <WaveSizer></WaveSizer>
@@ -36,7 +38,13 @@ function FooterSection(props) {
                     alignItems: "center",
                 }}
             >
-                <div style={{ flex: 1, display: "flex", width: "50%" }}>
+                <div
+                    style={{
+                        flex: 1,
+                        display: "flex",
+                        width: isMobile ? "80%" : "50%",
+                    }}
+                >
                     <Icon
                         icon={GithubIcon}
                         link={"https://github.com/SonavAgarwal"}
@@ -67,13 +75,13 @@ function FooterSection(props) {
                     <h3
                         style={{
                             color: "white",
-                            fontSize: "1vw",
+                            fontSize: isMobile ? "3vw" : "1vw",
                             textTransform: "none",
                             fontWeight: "normal",
                             marginTop: "1vw",
                         }}
                     >
-                        This site was coded by me using Gatsby.js.
+                        This site was coded by me using Gatsby.js. (v1.7)
                     </h3>
                 </div>
             </div>
@@ -82,6 +90,7 @@ function FooterSection(props) {
 }
 
 function Icon(props) {
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
     return (
         <div
             style={{
@@ -107,10 +116,12 @@ function Icon(props) {
                         draggable={false}
                         style={{
                             userSelect: "none",
-                            width: "3vw",
+                            width: isMobile ? "8vw" : "3vw",
                             borderRadius: "100%",
                             backgroundColor: "white",
-                            border: "1vw solid white",
+                            border: isMobile
+                                ? "3vw solid white"
+                                : "1vw solid white",
                         }}
                         alt="social icon"
                     />

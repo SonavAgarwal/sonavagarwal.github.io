@@ -8,6 +8,7 @@ import PressableText from "./PressableText.js";
 import Droplets from "../assets/Droplets.svg";
 
 import { motion } from "framer-motion";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 const nameArray = [
     "S",
     "o",
@@ -25,19 +26,31 @@ const nameArray = [
 ];
 
 function HeaderSection(props) {
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
     const tankRef = useRef(null);
 
     return (
-        <div>
+        <div
+            style={
+                {
+                    // height: isMobile ? "100vh" : null,
+                    // paddingBottom: isMobile ? "10vh" : "0",
+                }
+            }
+        >
             <div
                 className={"section"}
-                style={{ display: "flex", flexDirection: "column" }}
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    // height: isMobile ? "100%" : "100vh",
+                }}
             >
                 <FishTank tankRef={tankRef} />
                 <div
                     style={{
                         width: "100%",
-                        height: "100%",
+                        height: isMobile ? "-webkit-fill-available" : "100%",
                         display: "flex",
                         zIndex: 10,
                         flexDirection: "column",

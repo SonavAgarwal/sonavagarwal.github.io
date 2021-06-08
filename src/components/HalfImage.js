@@ -1,8 +1,10 @@
-import React from "react"
-import Pressable from "./Pressable"
+import React from "react";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
+import Pressable from "./Pressable";
 
 function HalfImage(props) {
-    const images = require.context("../assets", true)
+    const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
+    const images = require.context("../assets", true);
 
     return (
         <div
@@ -11,6 +13,8 @@ function HalfImage(props) {
                 alignItems: "center",
                 justifyContent: "center",
                 display: "flex",
+                // width: "100vw",
+                // height: "100vw",
             }}
         >
             <Pressable style={{ width: "100%" }}>
@@ -19,8 +23,8 @@ function HalfImage(props) {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        width: "100%",
-                        height: "80vh",
+                        width: isMobile ? "90vw" : "100%",
+                        height: isMobile ? "40vh" : "80vh",
                         // backgroundColor: "black",
                         background: `url("${props.imageSource}")`,
                         overflow: "hidden",
@@ -40,7 +44,7 @@ function HalfImage(props) {
                 </div>
             </Pressable>
         </div>
-    )
+    );
 }
 
-export default HalfImage
+export default HalfImage;

@@ -8,6 +8,7 @@ import Portrait from "../assets/Portrait.jpg";
 import DebatePortrait from "../assets/Debate Portrait.jpg";
 import ConnectionCircle from "../assets/Connection Circle.png";
 import CoinCatchers from "../assets/Coin Catchers.png";
+import SnakeGame from "../assets/SnakeGame.png";
 import ScheduleLink from "../assets/ScheduleLink.png";
 import LonCapaBeautify from "../assets/Lon Capa Beautify.png";
 import DailyLogSimplifier from "../assets/Daily Log Simplifier.png";
@@ -119,6 +120,24 @@ export default function Home() {
                     </PressableText>
                 </SquareCard>
                 <SquareCard
+                    imageSource={SnakeGame}
+                    title={"Slink.io"}
+                    description={
+                        "A multiplayer Java game created for my Advanced CS class."
+                    }
+                >
+                    In my CS class in 11th grade, the 2nd semester final was to
+                    create any multiplayer game using Java networking.
+                    <br />
+                    <br />
+                    You can download the code and try it{" "}
+                    <PressableText
+                        link={"https://github.com/SonavAgarwal/Slink.io"}
+                    >
+                        here.
+                    </PressableText>
+                </SquareCard>
+                <SquareCard
                     imageSource={ScheduleLink}
                     title={"Schedule Link"}
                     description={
@@ -167,6 +186,25 @@ export default function Home() {
                         here.
                     </PressableText>
                 </SquareCard>
+                {/* <SquareCard
+                    imageSource={DailyLogSimplifier}
+                    title={"Java Swing Components"}
+                    description={"A web app for using Java Swing."}
+                >
+                    This web app allows you to easily create a layout for a Java
+                    Swing program following the recommended structure from MVHS
+                    CS classes.
+                    <br />
+                    <br />
+                    You can see the app{" "}
+                    <PressableText
+                        link={
+                            "https://sonavagarwal.com/java-swing-component-creator//"
+                        }
+                    >
+                        here.
+                    </PressableText>
+                </SquareCard> */}
                 <SquareCard
                     imageSource={DailyLogSimplifier}
                     title={"Daily Log Simplifier"}

@@ -4,8 +4,9 @@ import HalfText from "../components/HalfText";
 import HeaderSection from "../components/HeaderSection";
 import Section from "../components/Section";
 
-import Portrait from "../assets/Portrait.jpg";
+import Portrait from "../assets/Portrait2.jpg";
 import DebatePortrait from "../assets/Debate Portrait.jpg";
+import MinecraftPortrait from "../assets/Minecraft Skin.png";
 import ConnectionCircle from "../assets/Connection Circle.png";
 import CoinCatchers from "../assets/Coin Catchers.png";
 import SnakeGame from "../assets/SnakeGame.png";
@@ -38,43 +39,78 @@ export default function Home() {
             <Section anchor={"About"}>
                 <HalfImage imageSource={Portrait} flexSize={4}></HalfImage>
                 <HalfText title="About Me" flexSize={8}>
-                    Hi! I'm Sonav Agarwal, a junior in high school in Silicon
-                    Valley. My resume is <PressableText>here.</PressableText>
+                    Hi! I'm Sonav Agarwal, a rising senior at Mountain View High
+                    School in Silicon Valley. My resume is{" "}
+                    <PressableText
+                        link={
+                            "https://drive.google.com/file/d/16hSG8AxpPcxUk6R3GXby9oZa1VWwoNJH/view?usp=sharing"
+                        }
+                    >
+                        here.
+                    </PressableText>
+                    <br />
+                    <br />I love learning, coding, art, swimming, and helping
+                    others. I frequently apply my interests in these areas to
+                    various{" "}
+                    <PressableText link={"#Projects"}>projects</PressableText> I
+                    work on. It is a passion of mine to use my computer science
+                    and design skills to help others!
                     <br />
                     <br />
-                    I enjoy many occupations including coding and graphic
-                    design. I started coding around third grade in Scratch, and
-                    have loved it ever since. I'm always interested in learning
-                    new skills! I am also a graphic design enthusiast. I have
-                    taken multiple classes in graphic design and apply my skills
-                    wherever possible.
-                    <br />
-                    <br />
-                    In my free time, I love speedrunning Minecraft or playing
-                    games with my friends.
+                    For example, during distance learning, I noticed that many
+                    students were stressed because they had to manage multiple
+                    class zoom links, so I created a web app to organize them. I
+                    shared the app with my classmates, helping dozens of people.
                 </HalfText>
             </Section>
-            <Section anchor={"School"}>
-                <HalfText title="School" flexSize={4}>
-                    I'm currently a junior at MVHS.
-                    <br />
-                    <br />
-                    I've done Speech and Debate at{" "}
+            <Section anchor={"Activities"}>
+                <HalfText title="Activities" flexSize={8}>
+                    I've competed in <b>Speech and Debate at</b>{" "}
                     <PressableText link={"https://www.mvlasd.club/"}>
                         MVLASD
                     </PressableText>{" "}
-                    for 3 years. This year, I qualified to TOC in Public Forum
-                    with a gold and a silver bid. I'm also the social committee
-                    chair in the club leadership.
+                    for 3 years. This year, I qualified to the{" "}
+                    <b>Tournament of Champions</b> in Public Forum with a gold
+                    and a silver bid. I'm also the PR committee chair in the{" "}
+                    <b>club leadership.</b>
                     <br />
-                    <br />I play for the MVHS sports teams. I started swimming
-                    early on and have played water polo and swam for the school
-                    for three years.
+                    <br />I am the <b>lead organizer</b> for{" "}
+                    <PressableText link={"https://mvhacks.io"}>
+                        MVHacks 5.0.
+                    </PressableText>{" "}
+                    and I am the vice president of the MVHS{" "}
+                    <b>Computer Science club.</b>
+                    <br />
+                    <br />I play for the MVHS sports teams. I started{" "}
+                    <b>swimming</b> early on and have played <b>water polo</b>{" "}
+                    and swam for the school for three years.
+                    <br />
                 </HalfText>
                 <HalfImage
                     imageSource={DebatePortrait}
                     flexSize={4}
                 ></HalfImage>
+            </Section>
+            <Section anchor={"Story"}>
+                <HalfImage
+                    imageSource={MinecraftPortrait}
+                    flexSize={4}
+                ></HalfImage>
+                <HalfText title="My Story" flexSize={8}>
+                    I started <b>coding</b> in Scratch when I was eight, and
+                    have loved it ever since. Now, I've taken CS courses, led CS
+                    clubs, and participated in hackathons. I am also a{" "}
+                    <b>graphic design</b> enthusiast. Whether it's mocking up an
+                    app, creating a flyer, or making a Minecraft skin, I love
+                    turning ideas into designs. I have taken multiple classes
+                    and I've used my artistic abilities in schoolwork, projects,
+                    and as the PR officer for many clubs, I use my creative
+                    skills for marketing.
+                    <br />
+                    <br />
+                    In my free time, I love speedrunning Minecraft or playing
+                    games with my friends.
+                </HalfText>
             </Section>
             <Section flex={true} fixedHeight={false} anchor={"Projects"}>
                 <BarTitle>Work / Projects</BarTitle>

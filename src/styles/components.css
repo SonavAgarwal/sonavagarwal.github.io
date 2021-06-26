@@ -176,3 +176,7 @@ p {
         line-height: 7vw;
     }
 }
+
+b {
+    font-weight: bold;
+}

@@ -5,6 +5,7 @@ import WaveImage from "../assets/WaveTop.svg";
 
 // import GithubIcon from "super-tiny-icons/images/svg/github.svg"
 import InstagramIcon from "super-tiny-icons/images/svg/instagram.svg";
+import LinkedInIcon from "super-tiny-icons/images/svg/linkedin.svg";
 import FacebookIcon from "super-tiny-icons/images/svg/facebook.svg";
 // import MailIcon from "super-tiny-icons/images/svg/gmail.svg"
 import MailIcon from "../assets/EmailIcon.png";
@@ -50,6 +51,10 @@ function FooterSection(props) {
                         link={"https://github.com/SonavAgarwal"}
                     />
                     <Icon
+                        icon={LinkedInIcon}
+                        link={"https://www.linkedin.com/in/sonavagarwal/"}
+                    />
+                    <Icon
                         icon={InstagramIcon}
                         link={"https://www.instagram.com/virtuosonav/"}
                     />
@@ -81,7 +86,7 @@ function FooterSection(props) {
                             marginTop: "1vw",
                         }}
                     >
-                        This site was coded by me using Gatsby.js. (v1.7)
+                        This site was coded by me using Gatsby.js. (v1.10)
                     </h3>
                 </div>
             </div>

@@ -12,6 +12,7 @@ import CoinCatchers from "../assets/Coin Catchers.png";
 import SnakeGame from "../assets/SnakeGame.png";
 import ScheduleLink from "../assets/ScheduleLink.png";
 import LonCapaBeautify from "../assets/Lon Capa Beautify.png";
+import JavaComponents from "../assets/JavaComponents.png";
 import DailyLogSimplifier from "../assets/Daily Log Simplifier.png";
 import CakeGame from "../assets/Cake Game.png";
 import Hackathons from "../assets/Friendly Reminders.png";
@@ -194,6 +195,25 @@ export default function Home() {
                     <PressableText
                         link={
                             "https://github.com/SonavAgarwal/ScheduleTaskLinkOrganizer"
+                        }
+                    >
+                        here.
+                    </PressableText>
+                </SquareCard>
+                <SquareCard
+                    imageSource={JavaComponents}
+                    title={"Java Swing Components"}
+                    description={
+                        "A web app to help Computer Science students easily make interfaces fo their projects."
+                    }
+                >
+                    In our AP and Advanced CS classes, one of the most tedious parts of any project is creating an interface using Java Swing. To improve this, I made a visual component creator so that students could focus on learning the concepts and code.
+                    <br />
+                    <br />
+                    You can use the project{" "}
+                    <PressableText
+                        link={
+                            "https://sonavagarwal.com/java-swing-component-creator/"
                         }
                     >
                         here.

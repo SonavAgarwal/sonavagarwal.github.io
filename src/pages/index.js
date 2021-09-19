@@ -40,7 +40,7 @@ export default function Home() {
             <Section anchor={"About"}>
                 <HalfImage imageSource={Portrait} flexSize={4}></HalfImage>
                 <HalfText title="About Me" flexSize={8}>
-                    Hi! I'm Sonav Agarwal, a rising senior at Mountain View High
+                    Hi! I'm Sonav Agarwal, a senior at Mountain View High
                     School in Silicon Valley. My resume is{" "}
                     <PressableText
                         link={

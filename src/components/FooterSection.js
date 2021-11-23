@@ -86,7 +86,7 @@ function FooterSection(props) {
                             marginTop: "1vw",
                         }}
                     >
-                        This site was coded by me using Gatsby.js. (v1.11)
+                        This site was coded by me using Gatsby.js. (v1.13)
                     </h3>
                 </div>
             </div>

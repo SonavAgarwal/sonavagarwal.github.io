@@ -40,8 +40,8 @@ export default function Home() {
             <Section anchor={"About"}>
                 <HalfImage imageSource={Portrait} flexSize={4}></HalfImage>
                 <HalfText title="About Me" flexSize={8}>
-                    Hi! I'm Sonav Agarwal, a senior at Mountain View High
-                    School in Silicon Valley. My resume is{" "}
+                    Hi! I'm Sonav Agarwal, a senior at Mountain View High School
+                    in Silicon Valley. My resume is{" "}
                     <PressableText
                         link={
                             "https://drive.google.com/file/d/16hSG8AxpPcxUk6R3GXby9oZa1VWwoNJH/view?usp=sharing"
@@ -131,7 +131,7 @@ export default function Home() {
                     <br /> You can try it out{" "}
                     <PressableText
                         link={
-                            "https://connection-circle.web.app/circle.html?uid=C4PimUXi6ReXvY0WICOC4xWEU9v2&name=Minecraft%20Demo%20Map"
+                            "https://connection-circle.web.app/map/FM8k76VLdwb3C34w2x7qOH0jk923/D2AGhnBxICeSG9FihjC0"
                         }
                     >
                         here.
@@ -207,7 +207,10 @@ export default function Home() {
                         "A web app to help Computer Science students easily make interfaces fo their projects."
                     }
                 >
-                    In our AP and Advanced CS classes, one of the most tedious parts of any project is creating an interface using Java Swing. To improve this, I made a visual component creator so that students could focus on learning the concepts and code.
+                    In our AP and Advanced CS classes, one of the most tedious
+                    parts of any project is creating an interface using Java
+                    Swing. To improve this, I made a visual component creator so
+                    that students could focus on learning the concepts and code.
                     <br />
                     <br />
                     You can use the project{" "}

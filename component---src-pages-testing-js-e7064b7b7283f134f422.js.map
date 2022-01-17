@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-testing-js-e7064b7b7283f134f422.js","mappings":"kKAMA,UAJA,SAAiBA,GACb,OAAO","sources":["webpack://gatsby-starter-hello-world/./src/pages/testing.js"],"sourcesContent":["import React from \"react\"\r\n\r\nfunction testing(props) {\r\n    return <div></div>\r\n}\r\n\r\nexport default testing\r\n"],"names":["props"],"sourceRoot":""}

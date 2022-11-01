@@ -40,8 +40,8 @@ export default function Home() {
             <Section anchor={"About"}>
                 <HalfImage imageSource={Portrait} flexSize={4}></HalfImage>
                 <HalfText title="About Me" flexSize={8}>
-                    Hi! I'm Sonav Agarwal, a senior at Mountain View High School
-                    in Silicon Valley. My resume is{" "}
+                    Hi! I'm Sonav Agarwal, a student at UCLA studying computer
+                    science. My resume is{" "}
                     <PressableText
                         link={
                             "https://drive.google.com/file/d/16hSG8AxpPcxUk6R3GXby9oZa1VWwoNJH/view?usp=sharing"
@@ -50,9 +50,9 @@ export default function Home() {
                         here.
                     </PressableText>
                     <br />
-                    <br />I love learning, coding, art, swimming, and helping
-                    others. I frequently apply my interests in these areas to
-                    various{" "}
+                    <br />I love learning, coding, singing, swimming, and
+                    helping others. I frequently apply my interests in these
+                    areas to various{" "}
                     <PressableText link={"#Projects"}>projects</PressableText> I
                     work on. It is a passion of mine to use my computer science
                     and design skills to help others!
@@ -66,25 +66,31 @@ export default function Home() {
             </Section>
             <Section anchor={"Activities"}>
                 <HalfText title="Activities" flexSize={8}>
-                    I've competed in <b>Speech and Debate at</b>{" "}
+                    Currently, I'm working as a <b>developer</b> for{" "}
+                    <PressableText link={"https://novaforgood.org/"}>
+                        Nova for Good
+                    </PressableText>
+                    , a club building tech solutions for nonprofits. <br />
+                    <br />
+                    I'm also at{" "}
+                    <PressableText link={"https://lahacks.com/"}>
+                        LA Hacks,
+                    </PressableText>{" "}
+                    working on organizing and planning the event.
+                    <br />
+                    <br />
+                    In high school, I competed in Speech and Debate at{" "}
                     <PressableText link={"https://www.mvlasd.club/"}>
                         MVLASD
                     </PressableText>{" "}
-                    for 3 years. This year, I qualified to the{" "}
-                    <b>Tournament of Champions</b> in Public Forum with a gold
-                    and a silver bid. I'm also the PR committee chair in the{" "}
-                    <b>club leadership.</b>
-                    <br />
-                    <br />I am the <b>lead organizer</b> for{" "}
+                    where I qualified to the <b>Tournament of Champions</b> in
+                    Public Forum, and contributed as the PR/Social chair. I was
+                    also the <b>lead organizer</b> for{" "}
                     <PressableText link={"https://mvhacks.io"}>
                         MVHacks 5.0.
                     </PressableText>{" "}
-                    and I am the vice president of the MVHS{" "}
-                    <b>Computer Science club.</b>
-                    <br />
-                    <br />I play for the MVHS sports teams. I started{" "}
-                    <b>swimming</b> early on and have played <b>water polo</b>{" "}
-                    and swam for the school for three years.
+                    I was the varsity swim captain and played varsity water polo
+                    for four years.
                     <br />
                 </HalfText>
                 <HalfImage
@@ -100,17 +106,17 @@ export default function Home() {
                 <HalfText title="My Story" flexSize={8}>
                     I started <b>coding</b> in Scratch when I was eight, and
                     have loved it ever since. Now, I've taken CS courses, led CS
-                    clubs, and participated in hackathons. I am also a{" "}
-                    <b>graphic design</b> enthusiast. Whether it's mocking up an
-                    app, creating a flyer, or making a Minecraft skin, I love
-                    turning ideas into designs. I have taken multiple classes
-                    and I've used my artistic abilities in schoolwork, projects,
-                    and as the PR officer for many clubs, I use my creative
-                    skills for marketing.
+                    clubs, participated in hackathons, and built real-world
+                    solutions. <br />
+                    <br />I am also a <b>graphic design</b> enthusiast. Whether
+                    it's mocking up an app, creating a flyer, or making a
+                    Minecraft skin, I love turning ideas into designs. I use my
+                    artistic abilities everywhere from schoolwork to marketing
+                    my projects.
                     <br />
                     <br />
-                    In my free time, I love speedrunning Minecraft or playing
-                    games with my friends.
+                    In my free time, I love karaokeing or playing games with my
+                    friends.
                 </HalfText>
             </Section>
             <Section flex={true} fixedHeight={false} anchor={"Projects"}>

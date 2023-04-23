@@ -18,11 +18,18 @@ function Fish(props) {
 
     // console.log(x)
 
+    function getRandomXPos() {
+        return Math.round(Math.random() * window.innerWidth);
+    }
+    function getRandomYPos() {
+        return Math.round(Math.random() * window.innerHeight);
+    }
+
     // const [xState, setXState] = useState(x.get())
 
     const mouse = useMouse(props.tankRef, { fps: 20 });
 
-    const [xPos, setXPos] = useState(window.innerWidth / 2);
+    const [xPos, setXPos] = useState(getRandomXPos());
     const [yPos, setYPos] = useState(-100);
     const [flipped, setFlipped] = useState(false);
     const [eyeRotation, setEyeRotation] = useState(0);
@@ -33,8 +40,12 @@ function Fish(props) {
     const [flapRate, setFlaprate] = useState(Math.random() * 2 + 1);
     const [hueShift, setHueShift] = useState(Math.round(Math.random() * 360));
 
-    useInterval(function () {
-        let newXPos = Math.round(Math.random() * window.innerWidth);
+    useEffect(() => {
+        moveFish();
+    }, []);
+
+    function moveFish() {
+        let newXPos = getRandomXPos();
         // console.log(newXPos + " " + xPos)
         if (newXPos > xPos) {
             setFlipped(true);
@@ -42,8 +53,10 @@ function Fish(props) {
             setFlipped(false);
         }
         setXPos(pos => newXPos);
-        setYPos(pos => Math.round(Math.random() * window.innerHeight));
-    }, moveRate);
+        setYPos(pos => getRandomYPos());
+    }
+
+    useInterval(moveFish, moveRate);
 
     useInterval(function () {
         let dy = y.get() - mouse.pageY;
@@ -89,6 +102,7 @@ function Fish(props) {
                 }}
             >
                 <motion.div
+                    style={{ position: "relative" }}
                     animate={{
                         scale: [0.8, 1],
                         rotateZ: [-5, 5],
@@ -137,6 +151,7 @@ function Fish(props) {
                     <img
                         style={{
                             zIndex: -10,
+                            position: "relative",
                             filter: `hue-rotate(${hueShift}deg)`,
                         }}
                         // src={FishImage}
@@ -149,6 +164,7 @@ function Fish(props) {
                             position: "absolute",
                             top: 0,
                             left: 0,
+                            zIndex: 100,
                         }}
                         animate={{
                             scale: 0.5,

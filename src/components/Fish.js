@@ -59,9 +59,15 @@ function Fish(props) {
     useInterval(moveFish, moveRate);
 
     useInterval(function () {
-        let dy = y.get() - mouse.pageY;
+        let dy = y.get() + 20 - mouse.pageY;
         let dx = x.get() - mouse.pageX;
-        if (flipped) dx *= -1;
+        if (flipped) {
+            dx -= 20;
+            dx += 100;
+            dx *= -1;
+        } else {
+            dx += 20;
+        }
 
         setEyeRotation(Math.round((Math.atan2(dy, dx) * 180) / Math.PI) - 90);
     }, 50);

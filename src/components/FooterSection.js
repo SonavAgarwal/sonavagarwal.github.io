@@ -76,7 +76,7 @@ function FooterSection(props) {
                         flexDirection: "column",
                     }}
                 >
-                    <h3 style={{ color: "white" }}>© Sonav Agarwal 2022</h3>
+                    <h3 style={{ color: "white" }}>© Sonav Agarwal 2023</h3>
                     <h3
                         style={{
                             color: "white",
@@ -86,7 +86,7 @@ function FooterSection(props) {
                             marginTop: "1vw",
                         }}
                     >
-                        This site was coded by me using Gatsby.js. (v1.15)
+                        This site was coded by me using Gatsby.js. (v1.16)
                     </h3>
                 </div>
             </div>

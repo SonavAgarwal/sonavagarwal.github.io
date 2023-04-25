@@ -4,9 +4,9 @@ import HalfText from "../components/HalfText";
 import HeaderSection from "../components/HeaderSection";
 import Section from "../components/Section";
 
-import Portrait from "../assets/Portrait2.jpg";
-import DebatePortrait from "../assets/Debate Portrait.jpg";
-import MinecraftPortrait from "../assets/Minecraft Skin.png";
+import Portrait from "../assets/Portrait3.jpg";
+import RoycePortrait from "../assets/RoycePortrait.jpg";
+import TravelPic from "../assets/YosemitePic3.jpg";
 import ConnectionCircle from "../assets/Connection Circle.png";
 import CoinCatchers from "../assets/Coin Catchers.png";
 import SnakeGame from "../assets/SnakeGame.png";
@@ -14,6 +14,8 @@ import ScheduleLink from "../assets/ScheduleLink.png";
 import LonCapaBeautify from "../assets/Lon Capa Beautify.png";
 import JavaComponents from "../assets/JavaComponents.png";
 import DailyLogSimplifier from "../assets/Daily Log Simplifier.png";
+import When2Eat from "../assets/When2EatLogo.png";
+import Noms from "../assets/noms logo.png";
 import CakeGame from "../assets/Cake Game.png";
 import Hackathons from "../assets/Friendly Reminders.png";
 import OldGames from "../assets/RedsRadAdventure.png";
@@ -56,12 +58,12 @@ export default function Home() {
                     <PressableText link={"#Projects"}>projects</PressableText> I
                     work on. It is a passion of mine to use my computer science
                     and design skills to help others!
-                    <br />
+                    {/* <br />
                     <br />
                     For example, during distance learning, I noticed that many
                     students were stressed because they had to manage multiple
                     class zoom links, so I created a web app to organize them. I
-                    shared the app with my classmates, helping dozens of people.
+                    shared the app with my classmates, helping dozens of people. */}
                 </HalfText>
             </Section>
             <Section anchor={"Activities"}>
@@ -93,16 +95,10 @@ export default function Home() {
                     for four years.
                     <br />
                 </HalfText>
-                <HalfImage
-                    imageSource={DebatePortrait}
-                    flexSize={4}
-                ></HalfImage>
+                <HalfImage imageSource={RoycePortrait} flexSize={4}></HalfImage>
             </Section>
             <Section anchor={"Story"}>
-                <HalfImage
-                    imageSource={MinecraftPortrait}
-                    flexSize={4}
-                ></HalfImage>
+                <HalfImage imageSource={TravelPic} flexSize={4}></HalfImage>
                 <HalfText title="My Story" flexSize={8}>
                     I started <b>coding</b> in Scratch when I was eight, and
                     have loved it ever since. Now, I've taken CS courses, led CS
@@ -121,6 +117,40 @@ export default function Home() {
             </Section>
             <Section flex={true} fixedHeight={false} anchor={"Projects"}>
                 <BarTitle>Work / Projects</BarTitle>
+                <SquareCard
+                    link={"/testing"}
+                    imageSource={Noms}
+                    title={"Noms"}
+                    description={
+                        "A mobile app to let UCLA students get leftover dining hall food at a discount."
+                    }
+                >
+                    I worked on this app for two quarters with a team of 10. We
+                    started out focused on only UCLA dining halls, but quicly
+                    expanded our scope to include restaurants in Westwood as
+                    well. <br />
+                    <br /> You can view the code{" "}
+                    <PressableText
+                        link={"https://github.com/UCLA-Noms/Noms-Frontend"}
+                    >
+                        here.
+                    </PressableText>
+                </SquareCard>
+                <SquareCard
+                    link={"/testing"}
+                    imageSource={When2Eat}
+                    title={"When2Eat"}
+                    description={"A simple way to schedule meals with friends."}
+                >
+                    I had a friend group that could never find a time to get
+                    together to eat, so I built this simple project. It ended up
+                    successfully bringing together four of our group's members.
+                    <br />
+                    <br /> You can try it out{" "}
+                    <PressableText link={"https://when2eat.web.app/"}>
+                        here.
+                    </PressableText>
+                </SquareCard>
                 <SquareCard
                     link={"/testing"}
                     imageSource={ConnectionCircle}
@@ -270,7 +300,7 @@ export default function Home() {
                         here.
                     </PressableText>
                 </SquareCard> */}
-                <SquareCard
+                {/* <SquareCard
                     imageSource={DailyLogSimplifier}
                     title={"Daily Log Simplifier"}
                     description={
@@ -296,8 +326,8 @@ export default function Home() {
                     >
                         here.
                     </PressableText>
-                </SquareCard>
-                <SquareCard
+                </SquareCard> */}
+                {/* <SquareCard
                     imageSource={CakeGame}
                     title={"APCS Final Projects"}
                     description={"Two games created for my AP CS class."}
@@ -320,7 +350,7 @@ export default function Home() {
                     >
                         here.
                     </PressableText>
-                </SquareCard>
+                </SquareCard> */}
                 <SquareCard
                     imageSource={Hackathons}
                     title={"Hackathons"}
@@ -347,7 +377,7 @@ export default function Home() {
                     over long distances. <br />
                     <br />
                 </SquareCard>
-                <SquareCard
+                {/* <SquareCard
                     imageSource={OldGames}
                     title={"Old Games"}
                     description={
@@ -371,7 +401,7 @@ export default function Home() {
                     </PressableText>{" "}
                     which I've used for both creating and teaching. <br />
                     <br />
-                </SquareCard>
+                </SquareCard> */}
             </Section>
             <FooterSection anchor={"Contact"}></FooterSection>
         </div>

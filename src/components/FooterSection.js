@@ -52,7 +52,7 @@ function FooterSection(props) {
                     />
                     <Icon
                         icon={LinkedInIcon}
-                        link={"https://www.linkedin.com/in/sonavagarwal/"}
+                        link={"https://www.linkedin.com/in/sonava/"}
                     />
                     <Icon
                         icon={InstagramIcon}
@@ -86,7 +86,7 @@ function FooterSection(props) {
                             marginTop: "1vw",
                         }}
                     >
-                        This site was coded by me using Gatsby.js. (v1.16)
+                        This site was created by me using Gatsby.js. (v1.18)
                     </h3>
                 </div>
             </div>

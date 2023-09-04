@@ -1,0 +1,19 @@
+.control-dots {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: space-around;
+
+	padding-left: 0.5rem !important;
+	padding-right: 0.5rem !important;
+	box-sizing: border-box;
+}
+
+@media (max-aspect-ratio: 1/1) {
+	.control-dots {
+		bottom: unset;
+		top: 0;
+		height: 0.5rem;
+	}
+}

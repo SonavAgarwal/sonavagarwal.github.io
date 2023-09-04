@@ -1,0 +1,25 @@
+.container {
+	width: var(--content-width);
+	height: var(--content-height);
+
+	background-color: black;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.image {
+	width: 90%;
+	/* height: 100%; */
+	object-fit: cover;
+	object-position: top center;
+
+	/* scale: 0.9; */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

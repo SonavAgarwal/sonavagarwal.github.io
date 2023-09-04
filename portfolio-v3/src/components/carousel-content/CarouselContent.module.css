@@ -1,0 +1,44 @@
+.container {
+	width: var(--content-width);
+	height: var(--content-height);
+
+	background-color: black;
+}
+
+.imageContainer {
+	width: var(--content-width);
+	height: var(--content-height);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.indicator {
+	height: 0.5rem;
+	background-color: var(--background);
+	opacity: 0.25;
+	border-radius: 0.25rem;
+	flex: 1;
+	cursor: pointer;
+}
+
+.indicatorActive {
+	opacity: 0.95;
+}
+
+.image {
+	width: var(--content-width);
+	height: var(--content-height);
+	object-fit: contain;
+
+	scale: 0.95;
+}
+
+.carouselIndicator {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+
+	background-color: var(--primary-1);
+}

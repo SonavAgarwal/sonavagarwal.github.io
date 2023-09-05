@@ -2,6 +2,10 @@
 	font-family: "Jost", "Open Sans", sans-serif;
 }
 
+video::-internal-media-controls-overlay-cast-button {
+	display: none;
+}
+
 p {
 	font-family: "Open Sans", sans-serif;
 }

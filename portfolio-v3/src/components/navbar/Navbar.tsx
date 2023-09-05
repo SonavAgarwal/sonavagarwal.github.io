@@ -25,19 +25,19 @@ const Navbar = (props: Props) => {
 				</a>
 				<a
 					className={classNames(styles.icon)}
-					href={INSTAGRAM_LINK}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<FaInstagram />
-				</a>
-				<a
-					className={classNames(styles.icon)}
 					href={LINKEDIN_LINK}
 					target="_blank"
 					rel="noreferrer"
 				>
 					<FaLinkedin />
+				</a>
+				<a
+					className={classNames(styles.icon)}
+					href={INSTAGRAM_LINK}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<FaInstagram />
 				</a>
 				<img
 					src={ProfilePhoto}

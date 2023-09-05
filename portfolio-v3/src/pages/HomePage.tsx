@@ -15,7 +15,6 @@ import {
 } from "../data/data";
 import { getAllInfo } from "../data/firebase";
 import styles from "./HomePage.module.css";
-import { toast } from "react-hot-toast";
 
 const HomePage = () => {
 	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1");
@@ -33,32 +32,106 @@ const HomePage = () => {
 		activeTab = "forYou";
 	}
 
-	const { ref: aboutContentRef, inView: ACInView } = useInView({});
-	const { ref: projectContentRef, inView: PCInView } = useInView({});
+	// const { ref: aboutContentRef, inView: ACInView } = useInView({});
+	// const { ref: projectContentRef, inView: PCInView } = useInView({});
+
+	// useEffect(() => {
+	// 	if (ACInView) {
+	// 		setSearchParams({ t: "forYou" });
+	// 	} else if (PCInView) {
+	// 		setSearchParams({ t: "projects" });
+	// 	}
+	// }, [ACInView, PCInView]);
 
 	useEffect(() => {
-		if (ACInView) {
-			setSearchParams({ t: "aboutMe" });
-		} else if (PCInView) {
-			setSearchParams({ t: "projects" });
+		if (activeTab === "forYou") {
+			let element = document.getElementById("aboutMe");
+			if (element) {
+				element.scrollIntoView({
+					behavior: "smooth",
+				});
+			}
 		}
-	}, [ACInView, PCInView]);
+		if (activeTab === "projects") {
+			let element = document.getElementById("projects");
+			if (element) {
+				element.scrollIntoView({
+					behavior: "smooth",
+				});
+			}
+		}
+	}, []);
 
 	function handleTabClick(e: React.MouseEvent<HTMLButtonElement>) {
 		const name = e.currentTarget.name;
-		setSearchParams({ t: name });
+		if (name === "forYou") {
+			// remove query param
+			setSearchParams({});
+		} else {
+			setSearchParams({ t: name });
+		}
+		let element = document.getElementById(name);
+		let contentElement = document.querySelector(
+			"." + styles.content
+		) as HTMLElement;
+		if (contentElement) {
+			// console.log(contentElement.style.scrollSnapType);
+			// // change element scroll snap property
+			// let originalScrollSnapType = contentElement.style.scrollSnapType;
+			// contentElement.style.scrollSnapType = "none";
+			// setTimeout(() => {
+			// 	contentElement.style.scrollSnapType = originalScrollSnapType;
+			// }, 1000);
+		}
+		if (element) {
+			console.log(element);
+			element.scrollIntoView({
+				behavior: "smooth",
+			});
+		}
 	}
 
 	if (isMobile) {
 		return (
 			<div className={styles.content}>
-				<div ref={aboutContentRef}>
+				<div className={classNames(styles.topTabs)}>
+					<button
+						className={classNames(
+							styles.topTab,
+							activeTab === "forYou" && styles.topTabActive
+						)}
+						name="forYou"
+						onClick={handleTabClick}
+					>
+						For You
+					</button>{" "}
+					|{""}
+					<button
+						className={classNames(
+							styles.topTab,
+							activeTab === "projects" && styles.topTabActive
+						)}
+						name="projects"
+						onClick={handleTabClick}
+					>
+						Projects
+					</button>
+				</div>
+				<div
+					className={styles.contentSectionWrapper}
+					//  ref={aboutContentRef}
+				>
+					<div id="forYou" className={styles.scrollAnchor} />
 					{ABOUT_ME_CONTENT.map((data) => (
 						<ContentSection contentInfo={data} key={data.title} />
 					))}
 				</div>
 
-				<div ref={projectContentRef}>
+				<div
+					// ref={projectContentRef}
+					className={styles.contentSectionWrapper}
+				>
+					<div id="projects" className={styles.scrollAnchor} />
 					{PROJECT_CONTENT.map((data) => (
 						<ContentSection contentInfo={data} key={data.title} />
 					))}
@@ -84,17 +157,6 @@ const HomePage = () => {
 				<button
 					className={classNames(
 						styles.pageTab,
-						activeTab === "aboutMe" && styles.pageTabActive
-					)}
-					name="aboutMe"
-					onClick={handleTabClick}
-				>
-					<FaUserAlt />
-					About Me
-				</button>
-				<button
-					className={classNames(
-						styles.pageTab,
 						activeTab === "projects" && styles.pageTabActive
 					)}
 					name="projects"
@@ -103,6 +165,15 @@ const HomePage = () => {
 					<FaPencilRuler />
 					Projects
 				</button>
+				<a
+					className={classNames(styles.pageTab, styles.myResume)}
+					target="_blank"
+					rel="noreferrer"
+					href="https://drive.google.com/file/d/16hSG8AxpPcxUk6R3GXby9oZa1VWwoNJH/view"
+				>
+					<FaUserAlt />
+					My Resume
+				</a>
 
 				<div className={styles.horizontalLine} />
 				<h1 className={styles.sectionTitle}>Followed topics</h1>
@@ -122,13 +193,22 @@ const HomePage = () => {
 			<div className={classNames(styles.leftSpacer)} />
 
 			<div className={styles.content}>
-				<div ref={aboutContentRef}>
+				<div
+					// ref={aboutContentRef}
+
+					className={styles.contentSectionWrapper}
+				>
+					<div id="forYou" className={styles.scrollAnchor} />
 					{ABOUT_ME_CONTENT.map((data) => (
 						<ContentSection contentInfo={data} key={data.title} />
 					))}
 				</div>
 
-				<div ref={projectContentRef}>
+				<div
+					// ref={projectContentRef}
+					className={styles.contentSectionWrapper}
+				>
+					<div id="projects" className={styles.scrollAnchor} />
 					{PROJECT_CONTENT.map((data) => (
 						<ContentSection contentInfo={data} key={data.title} />
 					))}

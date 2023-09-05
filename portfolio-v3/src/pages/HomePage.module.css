@@ -87,6 +87,48 @@
 	color: var(--primary-1);
 }
 
+.myResume {
+	color: var(--text-primary);
+	text-decoration: none;
+}
+
+/* ============= */
+
+.topTabs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 100;
+
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 2rem;
+
+	color: white;
+}
+
+.topTab {
+	color: white;
+	font-size: 1.25rem;
+
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+
+	opacity: 0.2rem;
+
+	transition: all 0.2s ease;
+}
+
+.topTabActive {
+	font-weight: bold;
+	opacity: 1rem;
+}
+
 /* ============= */
 
 .content {
@@ -98,7 +140,22 @@
 
 	/* justify-content: center; */
 	align-items: center;
+
+	position: relative;
 }
+
+/* ============= */
+
+.contentSectionWrapper {
+	position: relative;
+}
+
+.scrollAnchor {
+	position: absolute;
+	top: -6rem;
+}
+
+/* ============= */
 
 @media (max-aspect-ratio: 1/1) {
 	.left,
@@ -123,5 +180,10 @@
 		/* scroll snap parent properties */
 		scroll-snap-type: y mandatory;
 		scroll-snap-stop: always;
+	}
+
+	.scrollAnchor {
+		position: absolute;
+		top: 0;
 	}
 }

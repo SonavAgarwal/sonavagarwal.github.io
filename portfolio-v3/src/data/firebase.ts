@@ -1,3 +1,4 @@
+import { ALL_CONTENT } from "./data";
 import { AllInfo } from "./types";
 
 export async function getAllInfo(): Promise<AllInfo> {

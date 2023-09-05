@@ -21,6 +21,8 @@
 	border-radius: 0.25rem;
 	flex: 1;
 	cursor: pointer;
+
+	transition: opacity 0.25s ease-in-out;
 }
 
 .indicatorActive {

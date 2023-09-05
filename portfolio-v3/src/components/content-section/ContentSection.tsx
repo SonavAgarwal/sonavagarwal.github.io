@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { toast } from "react-hot-toast";
 import { BsChatDotsFill, BsChatFill, BsHeartFill } from "react-icons/bs";
 import { FiMusic } from "react-icons/fi";
-import { ImLink } from "react-icons/im";
+import { IoIosShareAlt } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import { useCopyToClipboard, useMediaQuery } from "usehooks-ts";
 import { ContentInfo } from "../../data/types";
@@ -26,6 +26,60 @@ const ContentSection = ({ contentInfo }: Props) => {
 	const { ref, inView } = useInView({
 		// triggerOnce: true,
 	});
+
+	function ActionButtons() {
+		return (
+			<>
+				<button
+					className={classNames(styles.action, liked && styles.actionActive)}
+					name="like"
+					onClick={() => {
+						if (liked) return;
+						sendLike(contentInfo.id);
+						setLiked(true);
+						contentInfo.likes++;
+						forceUpdate();
+					}}
+				>
+					<span
+						className={classNames(
+							styles.actionIcon,
+							liked && styles.actionIconActive
+						)}
+					>
+						<BsHeartFill />
+					</span>
+				</button>
+				<div className={styles.actionText}>
+					{displayNumber(contentInfo.likes)}
+				</div>
+				{/* <button className={classNames(styles.action)} name="comment">
+						<span className={classNames(styles.actionIcon)}>
+							<BsChatDotsFill />{" "}
+						</span>
+					</button>
+					<div className={styles.actionText}>
+						{displayNumber(contentInfo.likes)}
+					</div> */}
+				<button
+					name="share"
+					className={classNames(styles.action)}
+					onClick={() => {
+						copy(contentInfo.link);
+						toast.success("Copied link!", {
+							position: isMobile ? "top-center" : "bottom-right",
+							icon: "📋",
+						});
+					}}
+				>
+					<span className={classNames(styles.actionIcon)}>
+						<IoIosShareAlt />
+					</span>
+				</button>
+				<div className={styles.actionText}></div>
+			</>
+		);
+	}
 
 	if (isMobile) {
 		return (
@@ -53,58 +107,14 @@ const ContentSection = ({ contentInfo }: Props) => {
 					</p>
 				</div>
 				<div className={styles.actions}>
-					<img
-						src={contentInfo.photo}
-						alt="ContentImage"
-						className={classNames(styles.contentPhoto)}
-					/>
-					<button
-						className={classNames(styles.action, liked && styles.actionActive)}
-						name="like"
-						onClick={() => {
-							if (liked) return;
-							sendLike(contentInfo.id);
-							setLiked(true);
-							contentInfo.likes++;
-							forceUpdate();
-						}}
-					>
-						<span
-							className={classNames(
-								styles.actionIcon,
-								liked && styles.actionIconActive
-							)}
-						>
-							<BsHeartFill />
-						</span>
-					</button>
-					<div className={styles.actionText}>
-						{displayNumber(contentInfo.likes)}
-					</div>
-					{/* <button className={classNames(styles.action)} name="comment">
-						<span className={classNames(styles.actionIcon)}>
-							<BsChatDotsFill />{" "}
-						</span>
-					</button>
-					<div className={styles.actionText}>
-						{displayNumber(contentInfo.likes)}
-					</div> */}
-					<button
-						name="link"
-						className={classNames(styles.action)}
-						onClick={() => {
-							copy(contentInfo.link);
-							toast.success("Copied link!", {
-								position: "top-center",
-								icon: "📋",
-							});
-						}}
-					>
-						<span className={classNames(styles.actionIcon)}>
-							<ImLink />
-						</span>
-					</button>
-					<div className={styles.actionText}></div>
+					<a href={contentInfo.link} target="_blank" rel="noreferrer">
+						<img
+							src={contentInfo.photo}
+							alt="ContentImage"
+							className={classNames(styles.contentPhoto)}
+						/>
+					</a>
+					<ActionButtons />
 				</div>
 			</div>
 		);
@@ -113,11 +123,13 @@ const ContentSection = ({ contentInfo }: Props) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.left}>
-				<img
-					src={contentInfo.photo}
-					alt="ContentImage"
-					className={classNames(styles.contentPhoto)}
-				/>
+				<a href={contentInfo.link} target="_blank" rel="noreferrer">
+					<img
+						src={contentInfo.photo}
+						alt="ContentImage"
+						className={classNames(styles.contentPhoto)}
+					/>
+				</a>
 			</div>
 
 			<div className={styles.right}>
@@ -135,45 +147,7 @@ const ContentSection = ({ contentInfo }: Props) => {
 						{inView && <contentInfo.content.component />}
 					</div>
 					<div className={styles.actions}>
-						<button
-							className={classNames(
-								styles.action,
-								liked && styles.actionActive
-							)}
-							name="like"
-							onClick={() => {
-								if (liked) return;
-								sendLike(contentInfo.id);
-								setLiked(true);
-								contentInfo.likes++;
-								forceUpdate();
-							}}
-						>
-							<BsHeartFill />
-						</button>
-						<div className={styles.actionText}>
-							{displayNumber(contentInfo.likes)}
-						</div>
-						{/* <button className={classNames(styles.action)} name="comment">
-							<BsChatFill />
-						</button>
-						<div className={styles.actionText}>
-							{displayNumber(contentInfo.likes)}
-						</div> */}
-						<button
-							name="link"
-							className={classNames(styles.action)}
-							onClick={() => {
-								copy(contentInfo.link);
-								toast.success("Copied link!", {
-									position: "bottom-right",
-									icon: "📋",
-								});
-							}}
-						>
-							<ImLink />
-						</button>
-						<div className={styles.actionText}></div>
+						<ActionButtons />
 					</div>
 				</div>
 			</div>

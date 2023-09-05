@@ -19,6 +19,7 @@ import ConnectionCircle from "../content/projects/connection-circle/ConnectionCi
 import Bruinspace from "../content/projects/bruinspace/Bruinspace";
 import WelcomeContent from "../content/about/welcome/WelcomeContent";
 import LaHacks from "../content/about/la-hacks/LaHacks";
+import FunActivities from "../content/about/fun-activities/FunActivities";
 
 export const INSTAGRAM_LINK = "https://www.instagram.com/virtuosonav/";
 export const EMAIL_LINK = "mailto:me@sonavagarwal.com";
@@ -80,7 +81,7 @@ export const FOLLOWED_TOPICS: AccountInfo[] = [
 	{
 		title: "Minecraft",
 		subtitle: "Minecraft lover",
-		link: "",
+		link: "https://sonavagarwal.com",
 		photo: Minecraft,
 	},
 ];
@@ -91,7 +92,7 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 		title: "Hey! I'm Sonav.",
 		description: `I'm a 2nd year Computer Science student at UCLA.\n\nI'm currently working on Poppin, a social media startup that aims to connect people through events`,
 		photo: MeProfilePhoto,
-		link: "",
+		link: "https://sonavagarwal.com",
 		sound: "Hello - Adele",
 
 		likes: 0,
@@ -100,6 +101,22 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 
 		content: {
 			component: () => <WelcomeContent />,
+		},
+	},
+	{
+		id: "funthings",
+		title: "I'm Interesting",
+		description: `I love swimming, traveling, hiking, and looking at the stars.`,
+		photo: MeProfilePhoto,
+		link: "https://sonavagarwal.com",
+		sound: "Slay",
+
+		likes: 0,
+		comments: 0,
+		shares: 0,
+
+		content: {
+			component: () => <FunActivities />,
 		},
 	},
 	{
@@ -124,7 +141,7 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 	{
 		id: "poppin",
 		title: "Poppin's Website",
-		description: `The web app for Poppin, a social media startup that aims to connect people through events. \n\nI led the team to build the website from scratch, and implemented key features like event discovery and social networking.`,
+		description: `I created the web app for Poppin, a social media startup that aims to connect people through events. \n\nI led the team to build the website from scratch, and implemented key features like event discovery and social networking.`,
 		photo: Poppin,
 		link: "https://joinpoppin.com/",
 		sound: "React, Golang",
@@ -139,7 +156,7 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 	{
 		id: "aita",
 		title: "AI Teaching Assistant (AITA)",
-		description: `Made in 24 hours for Calhacks 2023, reached top 50.\n\n AITA uses Speechly, GPT, and Wikipedia's API to transcribe and fact check lectures in real time. It also uses HumeAI to help teachers give the best learning experience possible.`,
+		description: `Our team made this in 24 hours for Calhacks 2023, reached top 50.\n\n AITA uses Speechly, GPT, and Wikipedia's API to transcribe and fact check lectures in real time. It also uses HumeAI to help teachers give the best learning experience possible.`,
 		photo: AITA,
 		link: "https://github.com/sophiasharif/calhacks",
 		sound: "React, GPT, Speechly, HumeAI",

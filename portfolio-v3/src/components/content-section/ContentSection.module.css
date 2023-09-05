@@ -134,12 +134,14 @@
 
 	.actions {
 		position: absolute;
-		bottom: 2rem;
+		bottom: 4rem;
 		right: 1rem;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		z-index: 300;
 	}
 
 	.contentPhoto {
@@ -147,7 +149,7 @@
 		width: 2.5rem;
 		box-sizing: border-box;
 
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 
 		border: 2px solid white;
 		border-radius: 50%;
@@ -210,7 +212,8 @@
 		font-weight: bold;
 		/* font-size: 1.25rem; */
 		margin-top: 0rem;
-		margin-bottom: 1.5rem;
+		/* margin-bottom: 1.5rem; */
+		margin-bottom: 2.5rem;
 		/* mix-blend-mode: difference; */
 		/* text-stroke: 100vh black;
 		-webkit-text-stroke: 1px black; */
@@ -235,6 +238,8 @@
 			/* rgba(0, 0, 0, 0) 10%, */ rgba(0, 0, 0, 1) 50%,
 			rgba(0, 0, 0, 1) 100%
 		);
+
+		z-index: 200;
 	}
 
 	.title {

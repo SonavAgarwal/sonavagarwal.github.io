@@ -7,7 +7,8 @@ import { useInView } from "react-intersection-observer";
 import { useCopyToClipboard, useMediaQuery } from "usehooks-ts";
 import { ContentInfo } from "../../data/types";
 import styles from "./ContentSection.module.css";
-import { useState } from "react";
+import { useReducer, useState } from "react";
+import { sendLike } from "../../data/firebase";
 
 interface Props {
 	contentInfo: ContentInfo;
@@ -15,11 +16,14 @@ interface Props {
 
 const ContentSection = ({ contentInfo }: Props) => {
 	const [_, copy] = useCopyToClipboard();
+	const [__, forceUpdate] = useReducer((x) => x + 1, 0);
+
 	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
+	const [liked, setLiked] = useState(false);
 
 	const [infoOpen, setInfoOpen] = useState(false);
 
-	const { ref, inView, entry } = useInView({
+	const { ref, inView } = useInView({
 		// triggerOnce: true,
 	});
 
@@ -55,11 +59,21 @@ const ContentSection = ({ contentInfo }: Props) => {
 						className={classNames(styles.contentPhoto)}
 					/>
 					<button
-						className={classNames(styles.action, styles.actionActive)}
+						className={classNames(styles.action, liked && styles.actionActive)}
 						name="like"
+						onClick={() => {
+							if (liked) return;
+							sendLike(contentInfo.id);
+							setLiked(true);
+							contentInfo.likes++;
+							forceUpdate();
+						}}
 					>
 						<span
-							className={classNames(styles.actionIcon, styles.actionIconActive)}
+							className={classNames(
+								styles.actionIcon,
+								liked && styles.actionIconActive
+							)}
 						>
 							<BsHeartFill />
 						</span>
@@ -67,14 +81,14 @@ const ContentSection = ({ contentInfo }: Props) => {
 					<div className={styles.actionText}>
 						{displayNumber(contentInfo.likes)}
 					</div>
-					<button className={classNames(styles.action)} name="comment">
+					{/* <button className={classNames(styles.action)} name="comment">
 						<span className={classNames(styles.actionIcon)}>
 							<BsChatDotsFill />{" "}
 						</span>
 					</button>
 					<div className={styles.actionText}>
 						{displayNumber(contentInfo.likes)}
-					</div>
+					</div> */}
 					<button
 						name="link"
 						className={classNames(styles.action)}
@@ -90,9 +104,7 @@ const ContentSection = ({ contentInfo }: Props) => {
 							<ImLink />
 						</span>
 					</button>
-					<div className={styles.actionText}>
-						{displayNumber(contentInfo.likes)}
-					</div>
+					<div className={styles.actionText}></div>
 				</div>
 			</div>
 		);
@@ -124,20 +136,30 @@ const ContentSection = ({ contentInfo }: Props) => {
 					</div>
 					<div className={styles.actions}>
 						<button
-							className={classNames(styles.action, styles.actionActive)}
+							className={classNames(
+								styles.action,
+								liked && styles.actionActive
+							)}
 							name="like"
+							onClick={() => {
+								if (liked) return;
+								sendLike(contentInfo.id);
+								setLiked(true);
+								contentInfo.likes++;
+								forceUpdate();
+							}}
 						>
 							<BsHeartFill />
 						</button>
 						<div className={styles.actionText}>
 							{displayNumber(contentInfo.likes)}
 						</div>
-						<button className={classNames(styles.action)} name="comment">
+						{/* <button className={classNames(styles.action)} name="comment">
 							<BsChatFill />
 						</button>
 						<div className={styles.actionText}>
 							{displayNumber(contentInfo.likes)}
-						</div>
+						</div> */}
 						<button
 							name="link"
 							className={classNames(styles.action)}
@@ -151,9 +173,7 @@ const ContentSection = ({ contentInfo }: Props) => {
 						>
 							<ImLink />
 						</button>
-						<div className={styles.actionText}>
-							{displayNumber(contentInfo.likes)}
-						</div>
+						<div className={styles.actionText}></div>
 					</div>
 				</div>
 			</div>

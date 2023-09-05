@@ -1,4 +1,6 @@
 export interface ContentInfo {
+	id: string;
+
 	title: string;
 	description: string;
 	photo: any;
@@ -22,4 +24,10 @@ export interface AccountInfo {
 	subtitle: string;
 	photo: any;
 	link: string;
+}
+
+export interface AllInfo {
+	[key: string]: {
+		likes: number;
+	};
 }

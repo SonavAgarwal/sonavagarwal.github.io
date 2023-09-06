@@ -5,6 +5,7 @@ import { Oval } from "react-loader-spinner";
 import ReactPlayer from "react-player";
 import { useMediaQuery } from "usehooks-ts";
 import { MuteContext } from "../../App";
+import ContentFallback from "../content-fallback/ContentFallback";
 
 interface Props {
 	url: string;
@@ -79,31 +80,7 @@ const VideoContent = ({ url, volume }: Props) => {
 				muted={muted}
 				loop={true}
 				volume={volume || 1}
-				fallback={
-					<div
-						style={{
-							width: "100%",
-							height: "100%",
-							backgroundColor: "black",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-						}}
-					>
-						<Oval
-							height={80}
-							width={80}
-							color="white"
-							wrapperStyle={{}}
-							wrapperClass=""
-							visible={true}
-							ariaLabel="oval-loading"
-							secondaryColor="lightgray"
-							strokeWidth={2}
-							strokeWidthSecondary={2}
-						/>
-					</div>
-				}
+				fallback={<ContentFallback />}
 			/>
 			<div
 				ref={bottomRef}

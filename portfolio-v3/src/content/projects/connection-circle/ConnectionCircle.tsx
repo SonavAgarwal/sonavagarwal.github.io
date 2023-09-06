@@ -1,11 +1,6 @@
-import React from "react";
 import styles from "./ConnectionCircle.module.css";
-import { useMediaQuery } from "usehooks-ts";
 
-interface Props {}
-
-const ConnectionCircle = (props: Props) => {
-	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
+const ConnectionCircle = () => {
 	return (
 		<div className={styles.container}>
 			<iframe

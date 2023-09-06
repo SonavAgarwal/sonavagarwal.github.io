@@ -1,8 +1,6 @@
 import VideoContent from "../../../components/video-content/VideoContent";
 
-interface Props {}
-
-const LaHacks = (props: Props) => {
+const LaHacks = () => {
 	return (
 		<VideoContent
 			volume={0.3}

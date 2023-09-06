@@ -1,25 +1,24 @@
-import Instagram from "../assets/icons/instagram-icon.png";
-import Github from "../assets/icons/github-icon.png";
-import Linkedin from "../assets/icons/linkedin-icon.png";
+import AITA from "../assets/icons/aita-icon-2.png";
+import BruinspaceIcon from "../assets/icons/bruinspace-icon.png";
 import Email from "../assets/icons/email-icon.png";
+import Github from "../assets/icons/github-icon.png";
+import Instagram from "../assets/icons/instagram-icon.png";
 import LAHacks from "../assets/icons/lahacks-icon.png";
+import Linkedin from "../assets/icons/linkedin-icon.png";
+import Minecraft from "../assets/icons/minecraft-icon.png";
 import Nova from "../assets/icons/nova-icon.png";
 import Poppin from "../assets/icons/poppin-icon.png";
 import UCLA from "../assets/icons/ucla-icon.png";
-import Minecraft from "../assets/icons/minecraft-icon.png";
-import AITA from "../assets/icons/aita-icon-2.png";
-import ConnectionCircleIcon from "../assets/icons/connection-circle-icon.png";
-import BruinspaceIcon from "../assets/icons/bruinspace-icon.png";
 import MeProfilePhoto from "../assets/images/CornerProfilePhoto.png";
 
-import { AccountInfo, ContentInfo } from "./types";
-import PoppinWebsite from "../content/projects/poppin-website/PoppinWebsite";
-import AITeach from "../content/projects/ai-teaching-assistant/AITeach";
-import ConnectionCircle from "../content/projects/connection-circle/ConnectionCircle";
-import Bruinspace from "../content/projects/bruinspace/Bruinspace";
-import WelcomeContent from "../content/about/welcome/WelcomeContent";
-import LaHacks from "../content/about/la-hacks/LaHacks";
 import FunActivities from "../content/about/fun-activities/FunActivities";
+import Goodbye from "../content/about/goodbye/Goodbye";
+import LaHacks from "../content/about/la-hacks/LaHacks";
+import WelcomeContent from "../content/about/welcome/WelcomeContent";
+import AITeach from "../content/projects/ai-teaching-assistant/AITeach";
+import Bruinspace from "../content/projects/bruinspace/Bruinspace";
+import PoppinWebsite from "../content/projects/poppin-website/PoppinWebsite";
+import { AccountInfo, ContentInfo } from "./types";
 
 export const INSTAGRAM_LINK = "https://www.instagram.com/virtuosonav/";
 export const EMAIL_LINK = "mailto:me@sonavagarwal.com";
@@ -90,7 +89,7 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 	{
 		id: "welcome",
 		title: "Hey! I'm Sonav.",
-		description: `I'm a 2nd year Computer Science student at UCLA.\n\nI'm currently working on Poppin, a social media startup that aims to connect people through events`,
+		description: `I'm a 2nd year Computer Science student at UCLA.\n\nI'm currently working at Poppin, a social media startup that aims to connect people through events.`,
 		photo: MeProfilePhoto,
 		link: "https://sonavagarwal.com",
 		sound: "Hello - Adele",
@@ -122,7 +121,7 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 	{
 		id: "lahacks",
 		title: "LAHacks 2023",
-		description: `I was on the HackOps team for LAHacks 2023, the largest hackathon in the Southern California. \n\nI helped organize the event and MC'd the opening and closing ceremonies!`,
+		description: `I was on the HackOps team for LAHacks 2023, the largest hackathon in the Southern California. \n\nI organized the event and MC'd the opening and closing ceremonies for over 1000 attendees!`,
 		photo: LAHacks,
 		link: "https://lahacks.com/",
 		sound: "Vampire - Olivia Rodrigo",
@@ -156,7 +155,7 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 	{
 		id: "aita",
 		title: "AI Teaching Assistant (AITA)",
-		description: `Our team made this in 24 hours for Calhacks 2023, reached top 50.\n\n AITA uses Speechly, GPT, and Wikipedia's API to transcribe and fact check lectures in real time. It also uses HumeAI to help teachers give the best learning experience possible.`,
+		description: `Our team made this in 24 hours for Calhacks 2023, reached top 50/250+.\n\n AITA fact checks lectures in real time using Speechly, GPT, and Wikipedia's API. It also uses HumeAI to help teachers give the best learning experience possible.`,
 		photo: AITA,
 		link: "https://github.com/sophiasharif/calhacks",
 		sound: "React, GPT, Speechly, HumeAI",
@@ -185,7 +184,7 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 	// },
 	{
 		id: "bruinspace",
-		title: "Bruinspace Overseer",
+		title: "Bruinspace Weather Balloon",
 		description: `We designed a Python-based Raspberry Pi flight computer software for our weather balloon mission. We also worked on a machine learning model to accurately predict the payload's descent.`,
 		photo: BruinspaceIcon,
 		link: "https://bruinspace.com/index",
@@ -196,6 +195,21 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 
 		content: {
 			component: () => <Bruinspace />,
+		},
+	},
+	{
+		id: "goodbye",
+		title: "See ya!",
+		description: `Thanks for checking out my website!\nMake sure to leave a #like!`,
+		photo: MeProfilePhoto,
+		link: "https://sonavagarwal.com",
+		sound: "Bye Bye Bye - NSYNC",
+		likes: 0,
+		comments: 0,
+		shares: 0,
+
+		content: {
+			component: () => <Goodbye />,
 		},
 	},
 ];

@@ -1,8 +1,4 @@
-import React from "react";
-
-interface Props {}
-
-const When2Eat = (props: Props) => {
+const When2Eat = () => {
 	return <div>When2Eat</div>;
 };
 

@@ -41,6 +41,16 @@
 	margin-left: 0.5rem;
 }
 
+.right {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
 .profilePhoto {
 	width: 2.5rem;
 	height: 2.5rem;

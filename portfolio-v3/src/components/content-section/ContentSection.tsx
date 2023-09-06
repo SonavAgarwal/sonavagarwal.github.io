@@ -1,14 +1,14 @@
 import classNames from "classnames";
+import { useReducer, useState } from "react";
 import { toast } from "react-hot-toast";
-import { BsChatDotsFill, BsChatFill, BsHeartFill } from "react-icons/bs";
+import { BsHeartFill } from "react-icons/bs";
 import { FiMusic } from "react-icons/fi";
 import { IoIosShareAlt } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import { useCopyToClipboard, useMediaQuery } from "usehooks-ts";
+import { sendLike } from "../../data/firebase";
 import { ContentInfo } from "../../data/types";
 import styles from "./ContentSection.module.css";
-import { useReducer, useState } from "react";
-import { sendLike } from "../../data/firebase";
 
 interface Props {
 	contentInfo: ContentInfo;
@@ -26,6 +26,24 @@ const ContentSection = ({ contentInfo }: Props) => {
 	const { ref, inView } = useInView({
 		// triggerOnce: true,
 	});
+
+	function descriptionToMarkdown(description: string) {
+		// find all words that start with #
+		// put them in a <strong> tag
+		// return the new string
+
+		let words = description.split(" ");
+		let newWords: string[] = [];
+		for (let word of words) {
+			console.log(word);
+			if (word.startsWith("#")) {
+				newWords.push(`<strong>${word}</strong>`);
+			} else {
+				newWords.push(word);
+			}
+		}
+		return newWords.join(" ");
+	}
 
 	function ActionButtons() {
 		return (
@@ -98,8 +116,11 @@ const ContentSection = ({ contentInfo }: Props) => {
 							styles.description,
 							!infoOpen && styles.descriptionCut
 						)}
+						dangerouslySetInnerHTML={{
+							__html: descriptionToMarkdown(contentInfo.description) as string,
+						}}
 					>
-						{contentInfo.description}
+						{/* {contentInfo.description} */}
 					</p>
 					<p className={styles.sound}>
 						<FiMusic />
@@ -135,7 +156,12 @@ const ContentSection = ({ contentInfo }: Props) => {
 			<div className={styles.right}>
 				<div className={styles.top}>
 					<div className={styles.title}>{contentInfo.title}</div>
-					<p className={styles.description}>{contentInfo.description}</p>
+					<p
+						className={styles.description}
+						dangerouslySetInnerHTML={{
+							__html: descriptionToMarkdown(contentInfo.description) as string,
+						}}
+					></p>
 					<p className={styles.sound}>
 						<FiMusic />
 						{contentInfo.sound}

@@ -18,6 +18,11 @@ button {
 	padding: 0;
 }
 
+strong {
+	/* TODO: change, !important is bad practice */
+	font-weight: bold !important;
+}
+
 /* ==================== */
 /* CSS RESET */
 

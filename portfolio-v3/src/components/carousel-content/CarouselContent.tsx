@@ -1,9 +1,10 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import styles from "./CarouselContent.module.css";
-import "./CarouselContent.css";
 import classNames from "classnames";
 import { Carousel } from "react-responsive-carousel";
-import { useMediaQuery } from "usehooks-ts";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "./CarouselContent.css";
+import styles from "./CarouselContent.module.css";
+import { Img } from "react-image";
+import ContentFallback from "../content-fallback/ContentFallback";
 
 interface Props {
 	FRAMES: string[];
@@ -11,8 +12,6 @@ interface Props {
 }
 
 const CarouselContent = ({ FRAMES, interval = 1000 }: Props) => {
-	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
-
 	return (
 		<Carousel
 			className={classNames(styles.container)}
@@ -22,9 +21,12 @@ const CarouselContent = ({ FRAMES, interval = 1000 }: Props) => {
 			infiniteLoop={true}
 			showThumbs={false}
 			showArrows={false}
+			useKeyboardArrows={true}
 			showStatus={false}
 			interval={interval}
 			transitionTime={300}
+			preventMovementUntilSwipeScrollTolerance={true}
+			swipeScrollTolerance={20}
 			renderIndicator={(onClickHandler, isSelected, index) => {
 				return (
 					<div
@@ -41,7 +43,12 @@ const CarouselContent = ({ FRAMES, interval = 1000 }: Props) => {
 		>
 			{FRAMES.map((frame) => (
 				<div className={classNames(styles.imageContainer)} key={frame}>
-					<img src={frame} alt={frame} className={classNames(styles.image)} />
+					<Img
+						src={frame}
+						loader={<ContentFallback />}
+						alt={frame}
+						className={classNames(styles.image)}
+					/>
 				</div>
 			))}
 		</Carousel>

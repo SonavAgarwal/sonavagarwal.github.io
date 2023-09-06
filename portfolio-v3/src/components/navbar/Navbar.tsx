@@ -1,14 +1,12 @@
 import classNames from "classnames";
-import styles from "./Navbar.module.css";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useMediaQuery } from "usehooks-ts";
 import Logo from "../../assets/icons/SparkleLogo.svg";
 import ProfilePhoto from "../../assets/images/CornerProfilePhoto.png";
-import { useMediaQuery } from "usehooks-ts";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { GITHUB_LINK, INSTAGRAM_LINK, LINKEDIN_LINK } from "../../data/data";
+import styles from "./Navbar.module.css";
 
-interface Props {}
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
 	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
 
 	if (isMobile) {

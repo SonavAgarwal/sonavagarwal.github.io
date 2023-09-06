@@ -2,22 +2,33 @@ import classNames from "classnames";
 import { useEffect, useReducer } from "react";
 import { FaPencilRuler, FaUserAlt } from "react-icons/fa";
 import { IoSparkles } from "react-icons/io5";
-import { useInView } from "react-intersection-observer";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
-import AccountList from "../components/account-list/AccountList";
-import ContentSection from "../components/content-section/ContentSection";
+import AccountList from "../../components/account-list/AccountList";
+import ContentSection from "../../components/content-section/ContentSection";
 import {
 	ABOUT_ME_CONTENT,
 	FOLLOWED_TOPICS,
 	PROJECT_CONTENT,
 	SUGGESTED_ACCOUNTS,
-} from "../data/data";
-import { getAllInfo } from "../data/firebase";
+} from "../../data/data";
+import { getAllInfo } from "../../data/firebase";
 import styles from "./HomePage.module.css";
+import { toast } from "react-hot-toast";
 
 const HomePage = () => {
 	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1");
+
+	useEffect(() => {
+		toast.success(
+			isMobile ? "Tap videos to unmute!" : "Click videos to unmute!",
+			{
+				duration: 3000,
+				position: isMobile ? "top-right" : "top-center",
+				icon: "🔊",
+			}
+		);
+	}, []);
 
 	const [_, forceUpdate] = useReducer((x) => x + 1, 0);
 	useEffect(() => {
@@ -188,6 +199,12 @@ const HomePage = () => {
 				<div className={styles.horizontalLine} />
 				<p className={classNames(styles.sectionTitle, styles.footer)}>
 					© 2023 <span className={styles.name}>Sonav Agarwal</span>
+					<br />
+					<br />
+					By using this site, you agree to our{" "}
+					<Link to="/privacy-policy" className={styles.privacyPolicy}>
+						Privacy Policy
+					</Link>
 				</p>
 			</div>
 			<div className={classNames(styles.leftSpacer)} />

@@ -1,0 +1,35 @@
+.privacy-policy-page {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	box-sizing: border-box;
+}
+
+.privacy-policy {
+	width: 60rem;
+	max-width: 100%;
+	margin: 0;
+}
+
+.privacy-policy h1 {
+	width: 100%;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.privacy-policy p {
+	width: 100%;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}

@@ -8,12 +8,10 @@ import site6 from "./images/poppin-site-6.webp";
 import site7 from "./images/poppin-site-7.webp";
 import site8 from "./images/poppin-site-8.webp";
 
-interface Props {}
-
 const FRAMES = [site1, site2, site3, site4, site5, site6, site7, site8];
 
-const PoppinWebsite = (props: Props) => {
-	return <CarouselContent FRAMES={FRAMES} />;
+const PoppinWebsite = () => {
+	return <CarouselContent FRAMES={FRAMES} interval={1500} />;
 };
 
 export default PoppinWebsite;

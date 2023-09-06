@@ -10,6 +10,7 @@ const permittedContentIds = [
 	"poppin",
 	"aita",
 	"bruinspace",
+	"goodbye",
 ];
 
 export const personalWebsiteSendLike = onRequest(

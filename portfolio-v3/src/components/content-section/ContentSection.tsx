@@ -35,7 +35,6 @@ const ContentSection = ({ contentInfo }: Props) => {
 		let words = description.split(" ");
 		let newWords: string[] = [];
 		for (let word of words) {
-			console.log(word);
 			if (word.startsWith("#")) {
 				newWords.push(`<strong>${word}</strong>`);
 			} else {

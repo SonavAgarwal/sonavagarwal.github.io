@@ -95,7 +95,7 @@ const HomePage = () => {
 			// }, 1000);
 		}
 		if (element) {
-			console.log(element);
+			// console.log(element);
 			element.scrollIntoView({
 				behavior: "smooth",
 			});

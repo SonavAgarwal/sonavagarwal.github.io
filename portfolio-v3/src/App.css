@@ -1,0 +1,29 @@
+:root {
+	--border: 1px solid #eaeaea;
+	--background: #fff;
+	--background-2: #f5f5f5;
+	--text-primary: #000;
+	--text-secondary: #666;
+
+	--primary-1: #ff2967;
+	--primary-2: #29f1ff;
+
+	--side-padding: 3rem;
+
+	--content-width: 20rem;
+	--content-height: 35rem;
+}
+
+@media (max-aspect-ratio: 1/1) {
+	:root {
+		--content-width: 100vw;
+		--content-height: calc(100dvh - 4rem);
+
+		--text-secondary: #fff;
+	}
+
+	body {
+		overscroll-behavior: none;
+		overflow: hidden;
+	}
+}

@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 0rem;
+
+	/* margin-bottom: 1rem; */
+}
+
+.button {
+	color: var(--primary-1);
+	font-size: 0.875rem;
+	/* font-weight: bold; */
+
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+
+	width: 100%;
+	text-align: left;
+}

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { HiVolumeUp } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
-import { Oval } from "react-loader-spinner";
 import ReactPlayer from "react-player";
 import { useMediaQuery } from "usehooks-ts";
 import { MuteContext } from "../../App";

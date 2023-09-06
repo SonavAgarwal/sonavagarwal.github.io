@@ -155,7 +155,7 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 	{
 		id: "aita",
 		title: "AI Teaching Assistant (AITA)",
-		description: `Our team made this in 24 hours for Calhacks 2023, reached top 50/250+.\n\n AITA fact checks lectures in real time using Speechly, GPT, and Wikipedia's API. It also uses HumeAI to help teachers give the best learning experience possible.`,
+		description: `Our team made this in 24 hours for Calhacks 2023, reached top 50/250+.\n\nAITA fact checks lectures in real time using Speechly, GPT, and Wikipedia's API. It also uses HumeAI to help teachers give the best learning experience possible.`,
 		photo: AITA,
 		link: "https://github.com/sophiasharif/calhacks",
 		sound: "React, GPT, Speechly, HumeAI",

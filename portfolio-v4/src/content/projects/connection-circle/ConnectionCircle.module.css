@@ -1,0 +1,15 @@
+.container {
+	width: var(--content-width);
+	height: var(--content-height);
+
+	background-color: black;
+}
+
+.map {
+	width: var(--content-width);
+	height: var(--content-height);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

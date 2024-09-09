@@ -1,0 +1,39 @@
+.container {
+	width: var(--content-width);
+	height: var(--content-height);
+}
+
+.imageContainer {
+	width: var(--content-width);
+	height: var(--content-height);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageContainer > div > .control-dots {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+}
+
+.image {
+	/* width: 100%; */
+	width: var(--content-width);
+	height: var(--content-height);
+	object-fit: contain;
+
+	scale: 0.95;
+
+	/* object-fit: cover; */
+}
+
+.carouselIndicator {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+
+	background-color: var(--primary-1);
+}

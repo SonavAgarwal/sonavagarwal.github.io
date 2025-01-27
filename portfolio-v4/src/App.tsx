@@ -1,13 +1,18 @@
-import { createContext, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./App.css";
+import "./index.css";
 import PrivacyPolicy from "./pages/privacy-policy/PrivacyPolicy";
+import Home from "./pages/home/Home";
+import Clock from "./pages/clock/Clock";
 
 const router = createBrowserRouter([
 	{
 		path: "*",
-		element: <div>Home</div>,
+		element: <Home />,
+	},
+	{
+		path: "clock",
+		element: <Clock />,
 	},
 	{
 		path: "/privacy-policy",

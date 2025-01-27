@@ -40,7 +40,7 @@ const EmberAlert = (_: any) => {
 		>
 			<div className={classNames(styles.imageContainer)}>
 				<VideoContent
-					volume={0.7}
+					volume={1}
 					autoplay={false}
 					url="https://www.youtube.com/watch?v=YQ8jbAAUyys"
 				/>

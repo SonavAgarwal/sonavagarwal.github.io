@@ -8,8 +8,14 @@ const permittedContentIds = [
 	"funthings",
 	"lahacks",
 	"poppin",
-	"aita",
-	"bruinspace",
+	// "aita",
+	"calhacksclaim",
+	"emberalert",
+	"fitcheck",
+	"eating",
+	"music",
+	"nova",
+	// "bruinspace",
 	"goodbye",
 ];
 

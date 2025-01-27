@@ -1,5 +1,3 @@
-import AITA from "../assets/icons/aita-icon-2.png";
-import BruinspaceIcon from "../assets/icons/bruinspace-icon.png";
 import Email from "../assets/icons/email-icon.png";
 import Github from "../assets/icons/github-icon.png";
 import Instagram from "../assets/icons/instagram-icon.png";
@@ -9,14 +7,15 @@ import Minecraft from "../assets/icons/minecraft-icon.png";
 import Nova from "../assets/icons/nova-icon.png";
 import Poppin from "../assets/icons/poppin-icon.png";
 import UCLA from "../assets/icons/ucla-icon.png";
-import MeProfilePhoto from "../assets/images/CornerProfilePhoto.png";
+import MeProfilePhoto from "../assets/images/sonav_website_pfp_2.webp";
+import Eating from "../content/about/eating/Eating";
+import FitCheck from "../content/about/fit-check/FitCheck";
 
 import FunActivities from "../content/about/fun-activities/FunActivities";
 import Goodbye from "../content/about/goodbye/Goodbye";
-import LaHacks from "../content/about/la-hacks/LaHacks";
 import WelcomeContent from "../content/about/welcome/WelcomeContent";
-import AITeach from "../content/projects/ai-teaching-assistant/AITeach";
-import Bruinspace from "../content/projects/bruinspace/Bruinspace";
+import CalhacksClaim from "../content/projects/calhacksclaim/CalhacksClaim";
+import EmberAlert from "../content/projects/emberalert/EmberAlert";
 import PoppinWebsite from "../content/projects/poppin-website/PoppinWebsite";
 import { AccountInfo, ContentInfo } from "./types";
 
@@ -26,12 +25,6 @@ export const GITHUB_LINK = "https://github.com/SonavAgarwal";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/sonava/";
 
 export const SUGGESTED_ACCOUNTS: AccountInfo[] = [
-	{
-		title: "Github",
-		subtitle: "@SonavAgarwal",
-		photo: Github,
-		link: "https://github.com/SonavAgarwal",
-	},
 	{
 		title: "LinkedIn",
 		subtitle: "@sonava",
@@ -43,6 +36,12 @@ export const SUGGESTED_ACCOUNTS: AccountInfo[] = [
 		subtitle: "@virtuosonav",
 		photo: Instagram,
 		link: "https://www.instagram.com/virtuosonav/",
+	},
+	{
+		title: "Github",
+		subtitle: "@SonavAgarwal",
+		photo: Github,
+		link: "https://github.com/SonavAgarwal",
 	},
 	{
 		title: "Email",
@@ -60,8 +59,14 @@ export const FOLLOWED_TOPICS: AccountInfo[] = [
 		photo: UCLA,
 	},
 	{
-		title: "Poppin",
-		subtitle: "Web Lead / Fullstack",
+		title: "Nova, Tech for Good",
+		subtitle: "President",
+		link: "https://www.novaforgood.org/",
+		photo: Nova,
+	},
+	{
+		title: "Prev @ Poppin",
+		subtitle: "Fullstack Developer",
 		link: "https://joinpoppin.com/",
 		photo: Poppin,
 	},
@@ -70,12 +75,6 @@ export const FOLLOWED_TOPICS: AccountInfo[] = [
 		subtitle: "HackOps Coordinator",
 		link: "https://lahacks.com/",
 		photo: LAHacks,
-	},
-	{
-		title: "Nova, Tech for Good",
-		subtitle: "Developer",
-		link: "https://www.novaforgood.org/",
-		photo: Nova,
 	},
 	{
 		title: "Minecraft",
@@ -89,10 +88,10 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 	{
 		id: "welcome",
 		title: "Hey! I'm Sonav.",
-		description: `I'm a 2nd year Computer Science student at UCLA.\n\nI'm currently working at Poppin, a social media startup that aims to connect people through events.`,
+		description: `I'm a 3rd year Computer Science student at UCLA.`,
 		photo: MeProfilePhoto,
 		link: "https://sonavagarwal.com",
-		sound: "Hello - Adele",
+		sound: "Orignal Audio",
 
 		likes: 0,
 		comments: 0,
@@ -105,7 +104,7 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 	{
 		id: "funthings",
 		title: "I'm Interesting",
-		description: `I love swimming, traveling, hiking, and looking at the stars.`,
+		description: `I love traveling, eating out, and playing pickleball. Most recently, I visited Mexico City!`,
 		photo: MeProfilePhoto,
 		link: "https://sonavagarwal.com",
 		sound: "Slay",
@@ -119,31 +118,79 @@ export const ABOUT_ME_CONTENT: ContentInfo[] = [
 		},
 	},
 	{
-		id: "lahacks",
-		title: "LAHacks 2023",
-		description: `I was on the HackOps team for LAHacks 2023, the largest hackathon in the Southern California. \n\nI organized the event and MC'd the opening and closing ceremonies for over 1000 attendees!`,
-		photo: LAHacks,
-		link: "https://lahacks.com/",
-		sound: "Vampire - Olivia Rodrigo",
+		id: "fitcheck",
+		title: "Fit Check!",
+		description: ``,
+		photo: MeProfilePhoto,
+		link: "https://sonavagarwal.com",
+		sound: "duvet (electric guitar)",
 
 		likes: 0,
 		comments: 0,
 		shares: 0,
 
 		content: {
-			component: () => <LaHacks />,
+			component: () => <FitCheck />,
 		},
 	},
+	{
+		id: "eating",
+		title: "I like eating",
+		description: `I'm always happy to try anything!`,
+		photo: MeProfilePhoto,
+		link: "https://sonavagarwal.com",
+		sound: "Big Back",
+
+		likes: 0,
+		comments: 0,
+		shares: 0,
+
+		content: {
+			component: () => <Eating />,
+		},
+	},
+	// {
+	// 	id: "music",
+	// 	title: ""
+	// 	description: ``,
+	// 	photo: MeProfilePhoto,
+	// 	link: "https://sonavagarwal.com",
+	// 	sound: "Big Back",
+
+	// 	likes: 0,
+	// 	comments: 0,
+	// 	shares: 0,
+
+	// 	content: {
+	// 		component: () => <Eating />,
+	// 	},
+	// },
+	// {
+	// 	id: "lahacks",
+	// 	title: "LAHacks 2023",
+	// 	description: `I was on the HackOps team for LAHacks 2023, the largest hackathon in the Southern California. \n\nI organized the event and MC'd the opening and closing ceremonies for over 1000 attendees!`,
+	// 	photo: LAHacks,
+	// 	link: "https://lahacks.com/",
+	// 	sound: "Vampire - Olivia Rodrigo",
+
+	// 	likes: 0,
+	// 	comments: 0,
+	// 	shares: 0,
+
+	// 	content: {
+	// 		component: () => <LaHacks />,
+	// 	},
+	// },
 ];
 
 export const PROJECT_CONTENT: ContentInfo[] = [
 	{
 		id: "poppin",
-		title: "Poppin's Website",
-		description: `I created the web app for Poppin, a social media startup that aims to connect people through events. \n\nI led the team to build the website from scratch, and implemented key features like event discovery and social networking.`,
+		title: "Poppin",
+		description: `I created the web and Android app for Poppin, a social media startup that connects people through events. \n\nWe had more features like secure paid ticketing and live chat compared to competitors like Partiful, and the website had over 50,000 users.`,
 		photo: Poppin,
 		link: "https://joinpoppin.com/",
-		sound: "React, Golang",
+		sound: "React, Golang, 50,000+ users",
 		likes: 0,
 		comments: 0,
 		shares: 0,
@@ -153,18 +200,33 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 		},
 	},
 	{
-		id: "aita",
-		title: "AI Teaching Assistant (AITA)",
-		description: `Our team made this in 24 hours for Calhacks 2023, reached top 50/250+.\n\nAITA fact checks lectures in real time using Speechly, GPT, and Wikipedia's API. It also uses HumeAI to help teachers give the best learning experience possible.`,
-		photo: AITA,
-		link: "https://github.com/sophiasharif/calhacks",
-		sound: "React, GPT, Speechly, HumeAI",
+		id: "emberalert",
+		title: "Ember Alert",
+		description: `We won 1st place in sustainability and 3 other prizes at HackMIT 2024 for our platform that analyzes satellite images of homes for fire risk.`,
+		photo: MeProfilePhoto,
+		link: "https://www.youtube.com/watch?v=YQ8jbAAUyys",
+		sound: "HackMIT 2024",
 		likes: 0,
 		comments: 0,
 		shares: 0,
 
 		content: {
-			component: () => <AITeach />,
+			component: () => <EmberAlert />,
+		},
+	},
+	{
+		id: "calhacksclaim",
+		title: "Claim",
+		description: `We built an app that lets victims of natural disasters automatically file for insurance claims with pictures and videos of their home. We won $1000 from from Hyperbolic AI!`,
+		photo: MeProfilePhoto,
+		link: "https://www.youtube.com/watch?v=2fkQlLvGIrQ",
+		sound: "CalHacks 2024",
+		likes: 0,
+		comments: 0,
+		shares: 0,
+
+		content: {
+			component: () => <CalhacksClaim />,
 		},
 	},
 	// {
@@ -182,21 +244,21 @@ export const PROJECT_CONTENT: ContentInfo[] = [
 	// 		component: () => <ConnectionCircle />,
 	// 	},
 	// },
-	{
-		id: "bruinspace",
-		title: "Bruinspace Weather Balloon",
-		description: `We designed a Python-based Raspberry Pi flight computer software for our weather balloon mission. We also worked on a machine learning model to accurately predict the payload's descent.`,
-		photo: BruinspaceIcon,
-		link: "https://bruinspace.com/index",
-		sound: "Python, Raspberry Pi",
-		likes: 0,
-		comments: 0,
-		shares: 0,
+	// {
+	// 	id: "bruinspace",
+	// 	title: "Bruinspace Weather Balloon",
+	// 	description: `We designed a Python-based Raspberry Pi flight computer software for our weather balloon mission. We also worked on a machine learning model to accurately predict the payload's descent.`,
+	// 	photo: BruinspaceIcon,
+	// 	link: "https://bruinspace.com/index",
+	// 	sound: "Python, Raspberry Pi",
+	// 	likes: 0,
+	// 	comments: 0,
+	// 	shares: 0,
 
-		content: {
-			component: () => <Bruinspace />,
-		},
-	},
+	// 	content: {
+	// 		component: () => <Bruinspace />,
+	// 	},
+	// },
 	{
 		id: "goodbye",
 		title: "See ya!",

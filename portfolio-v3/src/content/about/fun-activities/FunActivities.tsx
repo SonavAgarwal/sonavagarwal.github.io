@@ -1,14 +1,13 @@
 import CarouselContent from "../../../components/carousel-content/CarouselContent";
-import f1 from "./images/activities-1.webp";
-import f2 from "./images/activities-2.webp";
-import f3 from "./images/activities-3.webp";
-import f4 from "./images/activities-4.webp";
-import f5 from "./images/activities-5.webp";
 
-const FRAMES = [f1, f2, f3, f4, f5];
+import f6 from "./images/activity_museum.webp";
+import f7 from "./images/activity_capy.webp";
+import f8 from "./images/activity_pyramid.webp";
+
+const FRAMES = [f7, f6, f8];
 
 const FunActivities = () => {
-	return <CarouselContent FRAMES={FRAMES} interval={1500} />;
+	return <CarouselContent FRAMES={FRAMES} interval={2000} />;
 };
 
 export default FunActivities;

@@ -198,7 +198,7 @@ const HomePage = () => {
 
 				<div className={styles.horizontalLine} />
 				<p className={classNames(styles.sectionTitle, styles.footer)}>
-					© 2023 <span className={styles.name}>Sonav Agarwal</span>
+					© 2025 <span className={styles.name}>Sonav Agarwal</span>
 					<br />
 					<br />
 					By using this site, you agree to our{" "}

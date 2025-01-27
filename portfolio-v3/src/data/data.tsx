@@ -72,7 +72,7 @@ export const FOLLOWED_TOPICS: AccountInfo[] = [
 	},
 	{
 		title: "LAHacks",
-		subtitle: "HackOps Coordinator",
+		subtitle: "Marketing Team",
 		link: "https://lahacks.com/",
 		photo: LAHacks,
 	},

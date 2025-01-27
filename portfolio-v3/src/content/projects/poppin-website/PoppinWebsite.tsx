@@ -5,7 +5,7 @@ import ss3 from "./images/poppin-app-screenshot-3.png";
 import ss4 from "./images/poppin-create.webp";
 import ss5 from "./images/poppin-stars.jpg";
 
-const FRAMES = [ss1, ss2, ss3, ss4, ss5];
+const FRAMES = [ss4, ss1, ss2, ss3, ss5];
 
 const PoppinWebsite = () => {
 	return <CarouselContent FRAMES={FRAMES} interval={2000} />;

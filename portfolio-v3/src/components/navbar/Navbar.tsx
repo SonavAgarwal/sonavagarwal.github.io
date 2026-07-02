@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useMediaQuery } from "usehooks-ts";
 import Logo from "../../assets/icons/SparkleLogo.svg";
-import ProfilePhoto from "../../assets/images/CornerProfilePhoto.png";
+import ProfilePhoto from "../../assets/images/sonav_website_pfp_2.webp";
 import { GITHUB_LINK, INSTAGRAM_LINK, LINKEDIN_LINK } from "../../data/data";
 import styles from "./Navbar.module.css";
 

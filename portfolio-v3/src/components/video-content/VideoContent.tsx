@@ -9,12 +9,13 @@ import ContentFallback from "../content-fallback/ContentFallback";
 interface Props {
 	url: string;
 	volume?: number;
+	autoplay?: boolean;
 }
 
 // const FRAMES = [me1, me2, me3, me4, me5];
 
-const VideoContent = ({ url, volume }: Props) => {
-	const [playing, setPlaying] = useState(true);
+const VideoContent = ({ url, volume, autoplay = true }: Props) => {
+	const [playing, setPlaying] = useState(autoplay);
 	const { muteState: muted, setMuteState: setMuted } = useContext(MuteContext);
 	const isMobile = useMediaQuery("(max-aspect-ratio: 1/1)");
 
@@ -71,6 +72,7 @@ const VideoContent = ({ url, volume }: Props) => {
 				style={{
 					width: "100%",
 					height: "100%",
+					pointerEvents: "none",
 				}}
 				width={"100%"}
 				height={"100%"}

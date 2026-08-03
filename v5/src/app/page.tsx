@@ -66,11 +66,14 @@ export default function Home() {
                             <br />
                             worked on this website.
                         </p> */}
-                        <button
+                        <a
+                            href="https://sonavagarwal.substack.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-accent px-2 py-1 rounded-sm text-background cursor-pointer"
                         >
                             Subscribe
-                        </button>
+                        </a>
                         <p>(to my Substack)</p>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ export type ArticleMetadata = {
     image: string;
     imageAlt: string;
     date: string;
+    slug: string;
 };
 
 export function toNextMetadata({

@@ -9,6 +9,7 @@ const manufacturingConsent = Manufacturing_Consent({
     variable: "--font-manufacturing-consent",
     weight: "400",
     subsets: ["latin"],
+    adjustFontFallback: false,
 });
 
 const openSans = Open_Sans({

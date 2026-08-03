@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Manufacturing_Consent, Noto_Serif, Open_Sans } from "next/font/google";
+import Link from "next/link";
+import Script from "next/script";
 
 // import { Navbar } from "@/components/navbar";
 
 import "./globals.css";
+
+const GOOGLE_ANALYTICS_ID = "G-E2XNDY9EVX";
 
 const manufacturingConsent = Manufacturing_Consent({
     variable: "--font-manufacturing-consent",
@@ -43,6 +47,26 @@ export default function RootLayout({
             <body className="flex min-h-full flex-col">
                 {/* <Navbar /> */}
                 <main className="flex-1">{children}</main>
+                <footer className="mx-auto flex w-full items-center justify-center border-t border-neutral-200 bg-neutral-100 px-4 py-6 text-xs text-neutral-500">
+                    <Link
+                        href="/privacy-policy/"
+                        className="underline decoration-neutral-300 underline-offset-4 transition-colors hover:text-neutral-900"
+                    >
+                        Privacy policy
+                    </Link>
+                </footer>
+                <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '${GOOGLE_ANALYTICS_ID}');
+                    `}
+                </Script>
             </body>
         </html>
     );

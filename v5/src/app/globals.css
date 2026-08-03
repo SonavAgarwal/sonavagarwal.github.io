@@ -30,8 +30,19 @@ body {
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+::view-transition-new(.article-page-enter) {
+    animation: article-page-fade-in 500ms ease-out both;
+}
+
+@keyframes article-page-fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    ::view-transition-group(.article-image-transition) {
+    ::view-transition-group(.article-image-transition),
+    ::view-transition-new(.article-page-enter) {
         animation-duration: 0s;
     }
 }

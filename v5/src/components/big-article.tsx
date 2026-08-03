@@ -1,31 +1,20 @@
+import type { ArticleMetadata } from "@/articles/article-metadata";
 import Image from "next/image";
 
-export default function BigArticle({
-    title,
-    preview,
-    image,
-    date,
-}: {
-    title: string;
-    preview: string;
-    image: string;
-    date: string;
-}) {
+export default function BigArticle({ title, preview, image }: ArticleMetadata) {
     return (
-        <article className="flex flex-row gap-4 pb-4 border-b border-b-black">
+        <article className="flex flex-row gap-4 border-b border-b-black pb-4">
             <div className="flex flex-col gap-1">
-                <h2 className="text-2xl font-serif font-bold">{title}</h2>
-                <p className="font-sans">
-                    {preview}
-                </p>
+                <h2 className="font-serif text-2xl font-bold">{title}</h2>
+                <p className="font-sans">{preview}</p>
             </div>
             <div>
                 <Image
-                    className="w-[100rem] h-auto object-cover aspect-3/2"
+                    className="aspect-3/2 h-auto w-[100rem] object-cover"
                     src={image}
                     width={1200}
                     height={800}
-                    alt="Placeholder Image"
+                    alt={title}
                 />
             </div>
         </article>

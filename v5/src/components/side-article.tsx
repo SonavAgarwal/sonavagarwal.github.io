@@ -1,19 +1,28 @@
+import type { ArticleMetadata } from "@/articles/article-metadata";
 import Image from "next/image";
 
-export default function SideArticle({ title, preview, image, date }: { title: string; preview: string; image: string; date: string }) {
+export default function SideArticle({
+    title,
+    preview,
+    image,
+    date,
+}: ArticleMetadata) {
     return (
-        <article className="flex flex-col gap-1 pb-4 border-b-neutral-300 border-b">
+        <article className="flex flex-col gap-1 border-b border-b-neutral-300 pb-4">
             <div className="pb-3">
                 <Image
-                    className="w-full h-auto object-cover aspect-3/2"
+                    className="aspect-3/2 h-auto w-full object-cover"
                     src={image}
                     width={1200}
                     height={800}
-                    alt="Placeholder Image" />
+                    alt={title}
+                />
             </div>
-            <h3 className="text-xl font-serif font-bold">{title}</h3>
+            <h3 className="font-serif text-xl font-bold">{title}</h3>
             <p className="font-sans text-neutral-500">{preview}</p>
-            <p className="font-sans text-xs text-neutral-500 uppercase tracking-[0.05em] mt-2">{date}</p>
+            <p className="mt-2 font-sans text-xs tracking-[0.05em] text-neutral-500 uppercase">
+                {date}
+            </p>
         </article>
     );
 }

@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/dev.mjs",
+    "compress:articles": "node scripts/compress-article-images.mjs",
     "generate:articles": "node scripts/generate-articles.mjs",
     "prebuild": "node scripts/generate-articles.mjs",
     "build": "next build --webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out --nojekyll",
     "start": "next start",
     "lint": "eslint"
   },

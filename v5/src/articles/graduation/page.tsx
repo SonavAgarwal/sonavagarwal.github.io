@@ -1,10 +1,11 @@
 import type { ArticleMetadata } from "@/articles/article-metadata";
 import ArticleHeader from "@/components/article-header";
+import image from "./image.webp";
 
 export const articleMetadata = {
     title: "Local larper graduates from UCLA",
     preview: "His biggest accomplishments over four years include eating at every dining hall in one day and winning a cake decorating competition.",
-    image: "/articles/beach_grad.jpg",
+    image,
     imageAlt: "A local larper graduating from UCLA",
     date: "June 2026",
     slug: "graduation",

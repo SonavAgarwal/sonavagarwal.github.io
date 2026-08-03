@@ -60,12 +60,18 @@ export default function Home() {
                         Sonav Agarwal
                     </h1>
 
-                    <div className="hidden flex-1 flex-col items-end justify-center md:flex">
+                    <div className="hidden flex-1 flex-col items-end justify-center md:flex gap-1">
                         {/* <p className="block max-w-50 text-right">
                             No coding agents
                             <br />
                             worked on this website.
                         </p> */}
+                        <button
+                            className="bg-accent px-2 py-1 rounded-sm text-background cursor-pointer"
+                        >
+                            Subscribe
+                        </button>
+                        <p>(to my Substack)</p>
                     </div>
                 </div>
                 <div className="flex w-full flex-row items-center justify-center gap-8 pb-3">

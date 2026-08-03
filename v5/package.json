@@ -6,7 +6,7 @@
     "dev": "node scripts/dev.mjs",
     "generate:articles": "node scripts/generate-articles.mjs",
     "prebuild": "node scripts/generate-articles.mjs",
-    "build": "next build",
+    "build": "next build --webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
     "start": "next start",

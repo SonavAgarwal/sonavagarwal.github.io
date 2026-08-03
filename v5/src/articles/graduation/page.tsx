@@ -3,7 +3,7 @@ import ArticleHeader from "@/components/article-header";
 
 export const articleMetadata = {
     title: "Local larper graduates from UCLA",
-    preview: "A basic example article about graduation.",
+    preview: "His biggest accomplishments over four years include eating at every dining hall in one day and winning a cake decorating competition.",
     image: "/articles/beach_grad.jpg",
     imageAlt: "A local larper graduating from UCLA",
     date: "June 2026",

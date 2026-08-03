@@ -36,7 +36,7 @@ const require = createRequire(import.meta.url);
 const nextBinary = require.resolve("next/dist/bin/next");
 const next = spawn(
     process.execPath,
-    [nextBinary, "dev", ...process.argv.slice(2)],
+    [nextBinary, "dev", "--webpack", ...process.argv.slice(2)],
     { stdio: "inherit" },
 );
 

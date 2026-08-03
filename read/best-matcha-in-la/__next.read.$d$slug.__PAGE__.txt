@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[8437,["437","static/chunks/437-7df5db2ef61321bc.js","229","static/chunks/app/read/%5Bslug%5D/page-960b2fa65d325822.js"],"Image"]
+3:I[484,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"w-full","children":[["$","header",null,{"className":"mx-auto flex max-w-2xl flex-col gap-4 py-8","children":[["$","h1",null,{"className":"font-serif text-4xl font-bold","children":"And the best matcha in LA is..."}],["$","p",null,{"className":"-mt-2 text-xl text-neutral-500 uppercase","children":"June 2026"}],["$","figure",null,{"className":"my-4 flex w-full flex-col gap-2","children":[["$","$L2",null,{"src":"/articles/rok_matcha.webp","alt":"A matcha drink from rōk","width":1200,"height":800,"sizes":"(min-width: 672px) 672px, 100vw","className":"aspect-3/2 h-auto w-full object-cover"}],["$","figcaption",null,{"className":"w-full text-right text-sm text-neutral-500","children":"A matcha drink from rōk"}]]}]]}],["$","div",null,{"className":"mx-auto max-w-2xl pb-12 text-xl","children":["$","p",null,{"children":"More thoughts coming soon..."}]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"bXYHccoYBq_4bF5abkdTW"}
+5:null

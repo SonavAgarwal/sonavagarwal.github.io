@@ -1,25 +1,43 @@
+"use client";
+
 import type { ArticleMetadata } from "@/articles/article-metadata";
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { ViewTransition } from "react";
+import { useState, ViewTransition } from "react";
+import { flushSync } from "react-dom";
 
-export default function SideArticle({
+export default function SmallArticle({
     metadata,
+    bottomLine,
 }: {
     metadata: ArticleMetadata;
+    bottomLine?: boolean;
 }) {
     const { title, preview, image, imageAlt, date, slug } = metadata;
+    const [isTransitionSource, setIsTransitionSource] = useState(false);
 
     return (
-        <article className="border-b border-b-neutral-300 pb-4">
+        <article
+            className={classNames(
+                bottomLine && "border-b border-b-neutral-300 pb-4",
+            )}
+        >
             <Link
                 className="flex flex-col gap-1"
                 href={`/read/${slug}`}
                 transitionTypes={["article-forward"]}
+                onNavigate={() => {
+                    flushSync(() => setIsTransitionSource(true));
+                }}
             >
                 <div className="pb-3">
                     <ViewTransition
-                        name={`article-image-${slug}`}
+                        name={
+                            isTransitionSource
+                                ? `article-image-${slug}`
+                                : undefined
+                        }
                         share={{
                             "article-forward": "article-image-transition",
                             default: "none",

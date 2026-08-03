@@ -23,8 +23,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </div>
                 </nav>
                 {/* back link */}
+                <div className="min-h-screen">
 
-                {children}
+                    {children}
+                </div>
             </div>
         </ViewTransition>
     );

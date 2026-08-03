@@ -1,4 +1,7 @@
-import type { ArticleMetadata } from "@/articles/article-metadata";
+import {
+    ArticleCategory,
+    type ArticleMetadata,
+} from "@/articles/article-metadata";
 import ArticlePlaceholder from "@/components/article-placeholder";
 import image from "./image.webp";
 
@@ -10,6 +13,7 @@ export const articleMetadata = {
     imageAlt: "A preview of Sonav's previous personal website",
     date: "August 2026",
     slug: "retired-personal-website",
+    categories: [ArticleCategory.Arts, ArticleCategory.Opinion],
 } satisfies ArticleMetadata;
 
 export default function Page() {

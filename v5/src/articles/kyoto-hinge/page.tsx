@@ -1,4 +1,7 @@
-import type { ArticleMetadata } from "@/articles/article-metadata";
+import {
+    ArticleCategory,
+    type ArticleMetadata,
+} from "@/articles/article-metadata";
 import ArticlePlaceholder from "@/components/article-placeholder";
 import image from "./image.webp";
 
@@ -9,6 +12,7 @@ export const articleMetadata = {
     imageAlt: "Sonav standing beneath the torii gates in Kyoto",
     date: "July 2026",
     slug: "kyoto-hinge",
+    categories: [ArticleCategory.Lifestyle, ArticleCategory.Opinion],
 } satisfies ArticleMetadata;
 
 export default function Page() {

@@ -47,10 +47,10 @@ export default function RootLayout({
             <body className="flex min-h-full flex-col">
                 {/* <Navbar /> */}
                 <main className="flex-1">{children}</main>
-                <footer className="mx-auto flex w-full items-center justify-center border-t border-neutral-200 bg-neutral-100 px-4 py-6 text-xs text-neutral-500">
+                <footer className="mx-auto flex w-full items-center justify-center border-t border-neutral-200 bg-neutral-100 px-4 py-8 text-xs text-neutral-500 mt-32">
                     <Link
                         href="/privacy-policy/"
-                        className="underline decoration-neutral-300 underline-offset-4 transition-colors hover:text-neutral-900"
+                        className="transition-colors hover:text-neutral-900"
                     >
                         Privacy policy
                     </Link>

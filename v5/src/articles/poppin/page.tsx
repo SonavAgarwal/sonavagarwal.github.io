@@ -1,4 +1,7 @@
-import type { ArticleMetadata } from "@/articles/article-metadata";
+import {
+    ArticleCategory,
+    type ArticleMetadata,
+} from "@/articles/article-metadata";
 import ArticlePlaceholder from "@/components/article-placeholder";
 import image from "./image.webp";
 
@@ -7,9 +10,10 @@ export const articleMetadata = {
     preview:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image,
-    imageAlt: "The Poppin team working together in the office",
+    imageAlt: "Sonav posing outside the Poppin office",
     date: "Monday, January 1, 2023",
     slug: "poppin",
+    categories: [ArticleCategory.Business],
 } satisfies ArticleMetadata;
 
 export default function Page() {

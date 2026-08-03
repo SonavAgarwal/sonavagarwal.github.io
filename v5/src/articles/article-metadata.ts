@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import type { StaticImageData } from "next/image";
 
+export enum ArticleCategory {
+    Business = "Business",
+    Arts = "Arts",
+    Lifestyle = "Lifestyle",
+    Opinion = "Opinion",
+    Cooking = "Cooking",
+}
+
+export const ARTICLE_CATEGORIES = Object.values(ArticleCategory);
+
 export type ArticleMetadata = {
     title: string;
     preview: string;
@@ -8,6 +18,7 @@ export type ArticleMetadata = {
     imageAlt: string;
     date: string;
     slug: string;
+    categories: ArticleCategory[];
 };
 
 export function toNextMetadata({

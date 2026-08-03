@@ -22,7 +22,7 @@ export default function ArticleHeader({
                 Back
             </button>
             <h1 className="font-serif text-4xl font-bold">{title}</h1>
-            <p className="-mt-2 text-xl text-neutral-500 uppercase">{date}</p>
+            <p className="-mt-2 text-md text-neutral-500">{date}</p>
             <figure className="my-4 flex w-full flex-col gap-2">
                 <ViewTransition
                     name={`article-image-${slug}`}

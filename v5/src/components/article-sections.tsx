@@ -119,7 +119,7 @@ export default function ArticleSections({
                 <div
                     id="section-articles"
                     aria-live="polite"
-                    className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4 [&>article]:pr-4 lg:[&>article]:border-r lg:[&>article]:border-r-neutral-300 [&>article:last-child:last-child]:border-r-0 lg:[&>article:nth-child(4n)]:border-r-0 [&>article:nth-child(odd)]:border-r [&>article:nth-child(odd)]:border-r-neutral-300"
+                    className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:[&>article]:border-r lg:[&>article]:border-r-neutral-300 [&>article:last-child:last-child]:border-r-0 lg:[&>article:nth-child(4n)]:border-r-0 [&>article:nth-child(odd)]:border-r [&>article:nth-child(odd)]:border-r-neutral-300"
                 >
                     {visibleSectionArticles.map((metadata) => (
                         <SmallArticle key={metadata.slug} metadata={metadata} />

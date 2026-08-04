@@ -3,5 +3,5 @@
 3:I[3994,["431","static/chunks/431-61ff5a9114c3b266.js","630","static/chunks/app/read/%5Bslug%5D/layout-b628dd37d5f9abca.js"],"default"]
 4:I[109,[],""]
 5:I[9016,[],""]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]},"serverProvidedParams":{"params":{"slug":"jane-street"},"promises":["$@6"]}}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"G4NvRioKqUzeFIYmrfLIW"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]},"serverProvidedParams":{"params":{"slug":"jane-street"},"promises":["$@6"]}}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"BOVFyGclkE8x9hQq1xvIl"}
 6:"$0:rsc:props:children:1:props:serverProvidedParams:params"

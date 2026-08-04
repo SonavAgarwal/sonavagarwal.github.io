@@ -14,7 +14,7 @@ export default function ArticleHeader({
     const router = useRouter();
 
     return (
-        <header className="mx-auto flex max-w-2xl flex-col gap-4 pb-8">
+        <header className="mx-auto flex max-w-2xl flex-col gap-4 px-4 pb-8 sm:px-0">
             <button
                 onClick={() => router.back()}
                 className="block w-auto flex-none text-left text-neutral-500 hover:text-neutral-700 cursor-pointer mb-2"

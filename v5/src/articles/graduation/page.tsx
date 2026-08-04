@@ -20,7 +20,7 @@ export default function Page() {
     return (
         <main className="w-full">
             <ArticleHeader metadata={articleMetadata} />
-            <div className="mx-auto max-w-2xl pb-12">
+            <div className="mx-auto max-w-2xl px-4 pb-12 sm:px-0">
                 <p className="text-xl">
                     I graduated! More thoughts coming soon...
                 </p>

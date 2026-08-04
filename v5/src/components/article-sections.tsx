@@ -87,9 +87,11 @@ export default function ArticleSections({
             {children}
 
             <section id="sections" className="scroll-mt-4 pt-8 pb-4">
-                <div className="mb-4 mt-16 border-t border-t-black" />
+                <div className="mt-16 mb-4 border-t border-t-black" />
                 <div className="flex w-full flex-col items-center justify-center gap-2 sm:flex-row">
-                    <h2 className="font-sans sm:text-base font-bold text-xl">Sections</h2>
+                    <h2 className="font-sans text-xl font-bold sm:text-base">
+                        Sections
+                    </h2>
                     <div className="-mr-2 hidden px-2 sm:block">|</div>
                     <div className="flex w-full flex-wrap gap-x-4 gap-y-1 sm:gap-x-2">
                         {ARTICLE_CATEGORIES_AND_ALL.map((category) => {
@@ -102,10 +104,11 @@ export default function ArticleSections({
                                     aria-pressed={isSelected}
                                     aria-controls="section-articles"
                                     onClick={() => selectCategory(category)}
-                                    className={`cursor-pointer underline-offset-4 hover:text-neutral-500 sm:px-2 sm:py-1 ${isSelected
-                                        ? "underline decoration-1"
-                                        : ""
-                                        }`}
+                                    className={`cursor-pointer underline-offset-4 hover:text-neutral-500 sm:px-2 sm:py-1 ${
+                                        isSelected
+                                            ? "underline decoration-1"
+                                            : ""
+                                    }`}
                                 >
                                     {category}
                                 </button>
@@ -116,7 +119,7 @@ export default function ArticleSections({
                 <div
                     id="section-articles"
                     aria-live="polite"
-                    className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:[&>article]:border-r lg:[&>article]:border-r-neutral-300 lg:[&>article]:pr-4 [&>article:last-child:last-child]:border-r-0 lg:[&>article:nth-child(4n)]:border-r-0 lg:[&>article:nth-child(4n)]:pr-0 [&>article:nth-child(odd)]:border-r [&>article:nth-child(odd)]:border-r-neutral-300 [&>article:nth-child(odd)]:pr-4"
+                    className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4 [&>article]:pr-4 lg:[&>article]:border-r lg:[&>article]:border-r-neutral-300 [&>article:last-child:last-child]:border-r-0 lg:[&>article:nth-child(4n)]:border-r-0 [&>article:nth-child(odd)]:border-r [&>article:nth-child(odd)]:border-r-neutral-300"
                 >
                     {visibleSectionArticles.map((metadata) => (
                         <SmallArticle key={metadata.slug} metadata={metadata} />

@@ -6,8 +6,7 @@ import {
     type ArticleMetadata,
 } from "@/articles/article-metadata";
 import SmallArticle from "@/components/small-article";
-import type { ReactNode } from "react";
-import { useState } from "react";
+import { Fragment, type ReactNode, useState } from "react";
 
 type ArticleCategoryAndAll = ArticleCategory | "All";
 const ARTICLES_PER_PAGE = 8;
@@ -119,11 +118,25 @@ export default function ArticleSections({
                 <div
                     id="section-articles"
                     aria-live="polite"
-                    className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:[&>article]:border-r lg:[&>article]:border-r-neutral-300 [&>article:last-child:last-child]:border-r-0 lg:[&>article:nth-child(4n)]:border-r-0 [&>article:nth-child(odd)]:border-r [&>article:nth-child(odd)]:border-r-neutral-300"
+                    className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)]"
                 >
-                    {visibleSectionArticles.map((metadata) => (
-                        <SmallArticle key={metadata.slug} metadata={metadata} />
-                    ))}
+                    {visibleSectionArticles.map((metadata, index) => {
+                        const showDesktopDivider =
+                            index < visibleSectionArticles.length - 1 &&
+                            index % 4 !== 3;
+
+                        return (
+                            <Fragment key={metadata.slug}>
+                                <SmallArticle metadata={metadata} />
+                                {showDesktopDivider && (
+                                    <div
+                                        aria-hidden="true"
+                                        className="hidden bg-neutral-300 lg:block"
+                                    />
+                                )}
+                            </Fragment>
+                        );
+                    })}
                 </div>
                 {hasMoreArticles && (
                     <button
